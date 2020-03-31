@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>我的第一篇博客 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##进程与线程 内容     没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序   程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它对应了从代码加载，执行至执行完毕的一个过程，这个过程也是进程本身从产生，发展，至消亡的过程。现在的操作系统可以管理一个计算机系统中的多个进程，即可以让计算机系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的第一篇博客">
+<meta property="og:url" content="http://yoursite.com/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##进程与线程 内容     没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序   程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它对应了从代码加载，执行至执行完毕的一个过程，这个过程也是进程本身从产生，发展，至消亡的过程。现在的操作系统可以管理一个计算机系统中的多个进程，即可以让计算机系统">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-31T05:33:42.000Z">
+<meta property="article:modified_time" content="2020-03-31T05:45:14.236Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time datetime="2020-03-31T05:33:42.000Z" itemprop="datePublished">2020-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我的第一篇博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##进程与线程</p>
+<p>内容</p>
+<hr>
+<p>   没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序<br>   程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它对应了从代码加载，执行至执行完毕的一个过程，这个<br>过程也是进程本身从产生，发展，至消亡的过程。现在的操作系统可以管理一个计算机系统中的多个进程，即可以让计算机系统中的多个进程轮流<br>使用CPU资源。<br>   线程的行为很像进程，线程是比进程更小的执行单位，一个进程在执行过程中可以产生多个线程，形成多条执行线索。线程可以共享进程中的某<br>些内存单元，并利用这些内存单元进行数据交换实时通信与必要的操作，但与进程不同的是，线程的中断和恢复可以更加节省系统的开销。具有多<br>个线程的进程能更好的表达和解决现实世界中的具体问题，多进程是计算机应用开发和程序设计的一项重要的实用技术。<br>   每个Java应用程序都有一个默认的主线程，Java应用程序总是从主类的main方法开始执行。当JVM开始加载代码，发现main方法之后，就会启<br>动一个线程，这个线程被称作主线程，该线程负责执行main方法。在main方法的执行中再创建的线程，就被称为程序中的其它线程。如果main方<br>法中没有创建其它的线程，那么当main方法执行完最后一个语句，即当main方法返回时，JVM就会结束Java应用程序。如果main方法又创建了其<br>它线程，那么JVM就要在主线程和其它线程之间轮流切换，保证每个线程都有机会使用 CPU资源，main方法即使执行完最后的语句（主线程结束）<br>JVM也不会结束JAVA应用程序，JVM要一直等到Java用应程序中的所有线程都结束之后，才结束Java 应用程序</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ck8fhahfe0001fcwfejfta05x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/31/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
