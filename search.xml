@@ -1,61 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Ubuntn黑屏问题</title>
-      <link href="/2020/04/01/ubuntn-hei-ping-wen-ti/"/>
-      <url>/2020/04/01/ubuntn-hei-ping-wen-ti/</url>
-      
-        <content type="html"><![CDATA[<hr><h1 id="基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题"><a href="#基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题" class="headerlink" title="基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题"></a>基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题</h1><ul><li><p><strong>在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好，后面第二次打开的时候经常会出现开Ubuntn会黑屏无法正常启动，它就搁那一动不动，想关它的时候一直显示虚拟机繁忙，除了重启电脑或者用任务管理器结束进程一点办法没有</strong></p><a id="more"></a></li><li><p><strong>在经历了很长一段时间的折磨和煎熬之后，包括重装了几次虚拟机和Ubuntn,搜遍了网上的解决办法，虽不知道黑屏的具体原因，但终于把问题解决了,这个办法可以一试</strong></p></li><li><p>首先，在windows搜索框搜cmd </p></li></ul><p><img src="https://img-blog.csdnimg.cn/20200401141039811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="\]"><br><strong>然后以管理员身份进行</strong><br><img src="https://img-blog.csdnimg.cn/20200401141422551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入  net winsock reset<br><img src="https://img-blog.csdnimg.cn/20200401141600238.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>重启电脑<br>win+R然后输入msconfig<br>在服务里先把隐藏所有Microsoft 服务打勾，然后<br>再在里面找到所有带VMware 的把勾取消</strong><br><img src="https://img-blog.csdnimg.cn/20200401141654876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>点击应用，确定，然后重启电脑<br>重启后发现所有vm相关进程都没有启动<br>再次打开msconfig,选中所有vm相关服务,点击应用,重启电脑<br>然后打开虚拟机就没有黑屏问题了，用这个方法过了一周到现在也没黑屏问题</strong></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>进程与线程</title>
+    <url>/2020/04/01/jin-cheng-yu-xian-cheng/</url>
+    <content><![CDATA[<ul>
+<li><h1 id="进程与线程———我的第一篇博客"><a href="#进程与线程———我的第一篇博客" class="headerlink" title="进程与线程———我的第一篇博客"></a><strong>进程与线程———我的第一篇博客</strong></h1></li>
+<li><strong>没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序</strong><a id="more"></a></li>
+<li><strong>程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它对应了从代码加载，执行至执行完毕的一个过程，这个过程也是进程本身从产生，发展，至消亡的过程。现在的操作系统可以管理一个计算机系统中的多个进程，即可以让计算机系统中的多个进程轮流使用CPU资源</strong></li>
+<li><strong>线程的行为很像进程，线程是比进程更小的执行单位，一个进程在执行过程中可以产生多个线程，形成多条执行线索。线程可以共享进程中的某些内存单元，并利用这些内存单元进行数据交换实时通信与必要的操作，但与进程不同的是，线程的中断和恢复可以更加节省系统的开销。具有多个线程的进程能更好的表达和解决现实世界中的具体问题，多进程是计算机应用开发和程序设计的一项重要的实用技术</strong></li>
+</ul>
+<ul>
+<li><strong>每个Java应用程序都有一个默认的主线程，Java应用程序总是从主类的main方法开始执行。当JVM开始加载代码，发现main方法之后，就会启动一个线程，这个线程被称作主线程，该线程负责执行main方法。在main方法的执行中再创建的线程，就被称为程序中的其它线程。如果main方法中没有创建其它的线程，那么当main方法执行完最后一个语句，即当main方法返回时，JVM就会结束Java应用程序。如果main方法又创建了其它线程，那么JVM就要在主线程和其它线程之间轮流切换，保证每个线程都有机会使用 CPU资源，main方法即使执行完最后的语句（主线程结束）JVM也不会结束JAVA应用程序，JVM要一直等到Java用应程序中的所有线程都结束之后，才结束Java 应用程序</strong></li>
+</ul>
+<hr>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a><a href="https://github.com/topking66">github</a></h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><strong>Java程序设计精编教程</strong></p>
+]]></content>
       <categories>
-          
-          <category> Linux </category>
-          
+        <category>进程</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-            <tag> Ubuntn </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>进程与线程</title>
-      <link href="/2020/04/01/jin-cheng-yu-xian-cheng/"/>
-      <url>/2020/04/01/jin-cheng-yu-xian-cheng/</url>
-      
-        <content type="html"><![CDATA[<ul><li><h1 id="进程与线程———我的第一篇博客"><a href="#进程与线程———我的第一篇博客" class="headerlink" title="进程与线程———我的第一篇博客"></a><strong>进程与线程———我的第一篇博客</strong></h1></li><li><strong>没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序</strong><a id="more"></a></li><li><strong>程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它对应了从代码加载，执行至执行完毕的一个过程，这个过程也是进程本身从产生，发展，至消亡的过程。现在的操作系统可以管理一个计算机系统中的多个进程，即可以让计算机系统中的多个进程轮流使用CPU资源</strong></li><li><strong>线程的行为很像进程，线程是比进程更小的执行单位，一个进程在执行过程中可以产生多个线程，形成多条执行线索。线程可以共享进程中的某些内存单元，并利用这些内存单元进行数据交换实时通信与必要的操作，但与进程不同的是，线程的中断和恢复可以更加节省系统的开销。具有多个线程的进程能更好的表达和解决现实世界中的具体问题，多进程是计算机应用开发和程序设计的一项重要的实用技术</strong></li></ul><ul><li><strong>每个Java应用程序都有一个默认的主线程，Java应用程序总是从主类的main方法开始执行。当JVM开始加载代码，发现main方法之后，就会启动一个线程，这个线程被称作主线程，该线程负责执行main方法。在main方法的执行中再创建的线程，就被称为程序中的其它线程。如果main方法中没有创建其它的线程，那么当main方法执行完最后一个语句，即当main方法返回时，JVM就会结束Java应用程序。如果main方法又创建了其它线程，那么JVM就要在主线程和其它线程之间轮流切换，保证每个线程都有机会使用 CPU资源，main方法即使执行完最后的语句（主线程结束）JVM也不会结束JAVA应用程序，JVM要一直等到Java用应程序中的所有线程都结束之后，才结束Java 应用程序</strong></li></ul><hr><h2 id="github"><a href="#github" class="headerlink" title="github"></a><a href="https://github.com/topking66">github</a></h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><strong>Java程序设计精编教程</strong></p>]]></content>
-      
-      
+      <tags>
+        <tag>进程</tag>
+        <tag>线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntn黑屏问题</title>
+    <url>/2020/04/01/ubuntn-hei-ping-wen-ti/</url>
+    <content><![CDATA[<hr>
+<h1 id="基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题"><a href="#基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题" class="headerlink" title="基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题"></a>基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题</h1><ul>
+<li><p><strong>在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好，后面第二次打开的时候经常会出现开Ubuntn会黑屏无法正常启动，它就搁那一动不动，想关它的时候一直显示虚拟机繁忙，除了重启电脑或者用任务管理器结束进程一点办法没有</strong></p>
+<a id="more"></a>
+</li>
+<li><p><strong>在经历了很长一段时间的折磨和煎熬之后，包括重装了几次虚拟机和Ubuntn,搜遍了网上的解决办法，虽不知道黑屏的具体原因，但终于把问题解决了,这个办法可以一试</strong></p>
+</li>
+<li><p>首先，在windows搜索框搜cmd </p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200401141039811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="\]
+"><br><strong>然后以管理员身份进行</strong><br><img src="https://img-blog.csdnimg.cn/20200401141422551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入  net winsock reset<br><img src="https://img-blog.csdnimg.cn/20200401141600238.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>重启电脑<br>win+R然后输入msconfig<br>在服务里先把隐藏所有Microsoft 服务打勾，然后<br>再在里面找到所有带VMware 的把勾取消</strong><br><img src="https://img-blog.csdnimg.cn/20200401141654876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>点击应用，确定，然后重启电脑<br>重启后发现所有vm相关进程都没有启动<br>再次打开msconfig,选中所有vm相关服务,点击应用,重启电脑<br>然后打开虚拟机就没有黑屏问题了，用这个方法过了一周到现在也没黑屏问题</strong></p>
+]]></content>
       <categories>
-          
-          <category> 进程 </category>
-          
+        <category>Linux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 进程 </tag>
-            
-            <tag> 线程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntn</tag>
+      </tags>
+  </entry>
 </search>
