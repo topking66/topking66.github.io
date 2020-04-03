@@ -16,6 +16,13 @@
 <p><img src="https://img-blog.csdnimg.cn/20200401141039811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="\]
 "><br><strong>然后以管理员身份进行</strong><br><img src="https://img-blog.csdnimg.cn/20200401141422551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入  net winsock reset<br><img src="https://img-blog.csdnimg.cn/20200401141600238.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>重启电脑<br>win+R然后输入msconfig<br>在服务里先把隐藏所有Microsoft 服务打勾，然后<br>再在里面找到所有带VMware 的把勾取消</strong><br><img src="https://img-blog.csdnimg.cn/20200401141654876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>点击应用，确定，然后重启电脑<br>重启后发现所有vm相关进程都没有启动<br>再次打开msconfig,选中所有vm相关服务,点击应用,重启电脑<br>然后打开虚拟机就没有黑屏问题了，用这个方法过了一周到现在也没黑屏问题</strong></p>
 ]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntn</tag>
+      </tags>
   </entry>
   <entry>
     <title>进程与线程</title>
@@ -32,5 +39,12 @@
 <hr>
 <h2 id="github"><a href="#github" class="headerlink" title="github"></a><a href="https://github.com/topking66" target="_blank" rel="noopener">github</a></h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><strong>Java程序设计精编教程</strong></p>
 ]]></content>
+      <categories>
+        <category>进程</category>
+      </categories>
+      <tags>
+        <tag>进程</tag>
+        <tag>线程</tag>
+      </tags>
   </entry>
 </search>
