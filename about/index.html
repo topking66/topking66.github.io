@@ -15,17 +15,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', '');
-</script>
-
 
     <title>关于 | topking</title>
     <link rel="icon" type="image/png" href="/pig.png">
@@ -607,7 +596,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"进程","value":1},{"name":"Linux","value":1}],
+                data: [{"name":"Linux","value":1},{"name":"进程","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -631,7 +620,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         xAxis: [
             {
                 type: 'category',
-                data: ["进程","线程","Linux","Ubuntn"]
+                data: ["Linux","Ubuntn","进程","线程"]
             }
         ],
         yAxis: [
@@ -728,18 +717,6 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">线程</span>
-            </a>
-            
-            
-            
             <a href="/tags/Linux/">
                 <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
             </a>
@@ -748,6 +725,18 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
             
             <a href="/tags/Ubuntn/">
                 <span class="chip center-align waves-effect waves-light chip-default">Ubuntn</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">线程</span>
             </a>
             
             
@@ -872,11 +861,11 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                         diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffDays + " 天 " + diffHours +
                             " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays +
                             " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                     }
                 }
@@ -930,31 +919,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 
 
 
-<script language = javascript >
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        var t1 = Date.UTC(2020, 03, 31, 00, 00, 00); //北京时间2018-2-13 00:00:00 
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond); 
-        var diff = t2 - t1; var diffYears = Math.floor(diff / years); 
-        var diffDays = Math.floor((diff / days) - diffYears * 365); 
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours); 
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes); 
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds); document.getElementById("sitetime").innerHTML = "本站已运行 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒"; 
-    } 
-	siteTime(); 
-</script>
+
 
 <span id="sitetime"></span>
 
@@ -995,6 +960,8 @@ $(function () {
 
     <!-- Baidu Analytics -->
 
+
+        
     <!-- Baidu Push -->
 
 <script>
