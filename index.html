@@ -17,7 +17,7 @@
 
 
     <title>topking</title>
-    <link rel="icon" type="image/jpeg" href="/medias/avatar.jpg">
+    <link rel="icon" type="image/png" href="/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -378,7 +378,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/' + (new Date().getHours()%6+7) + '.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getHours()%9 + '.jpg)');
 </script>
 
 
@@ -557,7 +557,7 @@
                    loop='all'
                    order='random'
                    preload='auto'
-                   volume='0.7'
+                   volume='0.8'
                    list-folded='true'
         >
         </meting-js>
@@ -594,7 +594,7 @@
             loop: 'false' === 'true',
             lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
             preload: 'auto',
-            volume: Number('0.7'),
+            volume: Number('0.8'),
             video: {
                 url: '/cg/LOLCG-觉醒.mp4',
                 pic: '',
