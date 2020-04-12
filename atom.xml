@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://topking66.gitee.io/"/>
-  <updated>2020-04-08T09:26:41.724Z</updated>
+  <updated>2020-04-12T06:27:36.328Z</updated>
   <id>https://topking66.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LinuxShell</title>
+    <link href="https://topking66.gitee.io/2020/04/12/Linux-Shell%E7%BC%96%E7%A8%8B/"/>
+    <id>https://topking66.gitee.io/2020/04/12/Linux-Shell%E7%BC%96%E7%A8%8B/</id>
+    <published>2020-04-12T05:46:43.000Z</published>
+    <updated>2020-04-12T06:27:36.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Shell-编程概述&quot;&gt;&lt;a href=&quot;#Shell-编程概述&quot; class=&quot;headerlink&quot; title=&quot;Shell 编程概述&quot;&gt;&lt;/a&gt;Shell
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://topking66.gitee.io/categories/Shell/"/>
+    
+    
+      <category term="Linux" scheme="https://topking66.gitee.io/tags/Linux/"/>
+    
+      <category term="Shell" scheme="https://topking66.gitee.io/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>赤途-隐形守护者前作</title>
