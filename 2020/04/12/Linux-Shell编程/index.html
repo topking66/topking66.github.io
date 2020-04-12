@@ -577,7 +577,7 @@ echo &quot;sum = $sum&quot;
 <h3 id="Sheel运算"><a href="#Sheel运算" class="headerlink" title="Sheel运算"></a>Sheel运算</h3><p>Shell比较常见的运算包括以下4中，功能都是将m+1：</p>
 <ol>
 <li><code>m=$[ m + 1 ]</code></li>
-<li><code>m=expr  $m + 1 `</code><strong>用``字符包括起来 ,需要注意的是加号两边要有空格</strong></li>
+<li><code>m=` expr  $m + 1 `</code><strong>用``字符包括起来 ,需要注意的是加号两边要有空格</strong></li>
 <li><code>let m=m+1</code></li>
 <li><code>m=$(( m + 1 ))</code></li>
 </ol>
