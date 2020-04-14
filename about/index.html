@@ -584,7 +584,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Shell","value":1},{"name":"Linux","value":1},{"name":"进程","value":1}],
+                data: [{"name":"Shell","value":1},{"name":"进程","value":1},{"name":"Linux","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -608,7 +608,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Linux","Shell","Ubuntn","隐形守护者","游戏","进程","线程"]
+                data: ["Linux","Shell","隐形守护者","游戏","进程","线程","Ubuntn"]
             }
         ],
         yAxis: [
@@ -750,12 +750,6 @@
             
             
             
-            <a href="/tags/Ubuntn/">
-                <span class="chip center-align waves-effect waves-light chip-default">Ubuntn</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E9%9A%90%E5%BD%A2%E5%AE%88%E6%8A%A4%E8%80%85/">
                 <span class="chip center-align waves-effect waves-light chip-default">隐形守护者</span>
             </a>
@@ -776,6 +770,12 @@
             
             <a href="/tags/%E7%BA%BF%E7%A8%8B/">
                 <span class="chip center-align waves-effect waves-light chip-default">线程</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Ubuntn/">
+                <span class="chip center-align waves-effect waves-light chip-default">Ubuntn</span>
             </a>
             
             
@@ -872,6 +872,8 @@
             
             
             
+            
+            
             <span id="busuanzi_container_site_pv">
                 |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
@@ -932,7 +934,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link ">
+        <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/topking66" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1009,17 +1011,6 @@ $(function () {
 
     <!-- Baidu Analytics -->
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?9f21662b60b67d979340025ca85bc5f8";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
     <!-- Baidu Push -->
 
 <script>
@@ -1039,6 +1030,8 @@ var _hmt = _hmt || [];
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
