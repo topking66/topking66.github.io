@@ -94,7 +94,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>时光轴</span>
     </a>
     
   </li>
@@ -328,7 +328,31 @@
 
             <div class="description center-align">
                 
-                <span id="jinrishici-sentence">正在加载诗词中...</span>
+               <span id="shici"></span>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script type="text/javascript">
+      jinrishici.load(function(result) {
+                    // 自己的处理逻辑
+                    content = result.data.origin.content,
+                    title =  result.data.origin.title,
+                    dynasty = result.data.origin.dynasty,
+                    author = result.data.origin.author,
+                    info = '《'+title+'》'+author
+                    pre=[]
+                    for (var key in content){
+                           pre.push(content[key])
+                    }
+                     var typed = new Typed("#shici", {
+                        strings: pre,
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                  });
+</script>
                 
             </div>
         </div>
@@ -584,7 +608,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Shell","value":1},{"name":"Linux","value":1},{"name":"进程","value":1}],
+                data: [{"name":"Linux","value":1},{"name":"Shell","value":1},{"name":"进程","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -608,7 +632,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Linux","Shell","Ubuntn","进程","线程","隐形守护者","游戏"]
+                data: ["Linux","Ubuntn","Shell","隐形守护者","游戏","进程","线程"]
             }
         ],
         yAxis: [
@@ -744,26 +768,14 @@
             
             
             
-            <a href="/tags/Shell/">
-                <span class="chip center-align waves-effect waves-light chip-default">Shell</span>
-            </a>
-            
-            
-            
             <a href="/tags/Ubuntn/">
                 <span class="chip center-align waves-effect waves-light chip-default">Ubuntn</span>
             </a>
             
             
             
-            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">线程</span>
+            <a href="/tags/Shell/">
+                <span class="chip center-align waves-effect waves-light chip-default">Shell</span>
             </a>
             
             
@@ -776,6 +788,18 @@
             
             <a href="/tags/%E6%B8%B8%E6%88%8F/">
                 <span class="chip center-align waves-effect waves-light chip-default">游戏</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">线程</span>
             </a>
             
             

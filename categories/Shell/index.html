@@ -94,7 +94,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>时光轴</span>
     </a>
     
   </li>
@@ -321,7 +321,31 @@
 
             <div class="description center-align">
                 
-                <span id="jinrishici-sentence">正在加载诗词中...</span>
+               <span id="shici"></span>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script type="text/javascript">
+      jinrishici.load(function(result) {
+                    // 自己的处理逻辑
+                    content = result.data.origin.content,
+                    title =  result.data.origin.title,
+                    dynasty = result.data.origin.dynasty,
+                    author = result.data.origin.author,
+                    info = '《'+title+'》'+author
+                    pre=[]
+                    for (var key in content){
+                           pre.push(content[key])
+                    }
+                     var typed = new Typed("#shici", {
+                        strings: pre,
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                  });
+</script>
                 
             </div>
         </div>
@@ -352,19 +376,19 @@
                 
                 
                 
-                <a href="/categories/Shell/" title="Shell: 1">
+                <a href="/categories/Linux/" title="Linux: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F9EBEA;">Shell
+                             chip-default "
+                            style="background-color: #F9EBEA;">Linux
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/Linux/" title="Linux: 1">
+                <a href="/categories/Shell/" title="Shell: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">Linux
+                             chip-active "
+                            style="background-color: #F5EEF8;">Shell
                         <span class="tag-length">1</span>
                     </span>
                 </a>

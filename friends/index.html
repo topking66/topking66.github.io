@@ -94,7 +94,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>归档</span>
+      <span>时光轴</span>
     </a>
     
   </li>
@@ -321,7 +321,31 @@
 
             <div class="description center-align">
                 
-                <span id="jinrishici-sentence">正在加载诗词中...</span>
+               <span id="shici"></span>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script type="text/javascript">
+      jinrishici.load(function(result) {
+                    // 自己的处理逻辑
+                    content = result.data.origin.content,
+                    title =  result.data.origin.title,
+                    dynasty = result.data.origin.dynasty,
+                    author = result.data.origin.author,
+                    info = '《'+title+'》'+author
+                    pre=[]
+                    for (var key in content){
+                           pre.push(content[key])
+                    }
+                     var typed = new Typed("#shici", {
+                        strings: pre,
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                  });
+</script>
                 
             </div>
         </div>
@@ -552,7 +576,7 @@
                                     <div class="friend-button">
                                         <a href="https://www.codesheep.cn/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
-                                            前去学习
+                                            戳一戳
                                         </a>
                                     </div>
                                 </div>
@@ -567,13 +591,13 @@
                                         <img src="http://image.luokangyuan.com/4027734.jpeg" alt="img">
                                         <div>
                                             <h1 class="friend-name">闪烁之狐</h1>
-                                            <p style="position: relative;top: -35px;">编程界大佬,博客主题作者</p>
+                                            <p style="position: relative;top: -35px;">编程界大佬,博客主题作者,技术牛</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
                                         <a href="https://blinkfox.github.io/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
-                                            瞧一瞧
+                                            戳一戳
                                         </a>
                                     </div>
                                 </div>
@@ -588,13 +612,13 @@
                                         <img src="https://bestzuo.cn/images/touxiang.jpg" alt="img">
                                         <div>
                                             <h1 class="friend-name">Sanarous</h1>
-                                            <p style="position: relative;top: -35px;">华为大佬</p>
+                                            <p style="position: relative;top: -35px;">华为大佬,普通的开发者,热情的学习者</p>
                                         </div>
                                     </div>
                                     <div class="friend-button">
                                         <a href="https://bestzuo.cn/" target="_blank"
                                             class="button button-glow button-rounded button-caution">
-                                            看一看
+                                            戳一戳
                                         </a>
                                     </div>
                                 </div>
@@ -604,27 +628,6 @@
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
                             <div class="card frind-card4">
-                                <div class="frind-ship">
-                                    <div class="title">
-                                        <img src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4095352087,3996779694&fm=26&gp=0.jpg" alt="img">
-                                        <div>
-                                            <h1 class="friend-name">Bilibili</h1>
-                                            <p style="position: relative;top: -35px;">深入学习平台</p>
-                                        </div>
-                                    </div>
-                                    <div class="friend-button">
-                                        <a href="https://www.bilibili.com/" target="_blank"
-                                            class="button button-glow button-rounded button-caution">
-                                            前去学习
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card5">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://yafine-blog.cn/medias/avatar.jpg" alt="img">
@@ -645,7 +648,7 @@
                         
                         
                         <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
-                            <div class="card frind-card6">
+                            <div class="card frind-card5">
                                 <div class="frind-ship">
                                     <div class="title">
                                         <img src="https://gitee.com/pengyirui/blog_img/raw/master/avatar.png" alt="img">
