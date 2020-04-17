@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://topking66.gitee.io/"/>
-  <updated>2020-04-13T03:11:34.088Z</updated>
+  <updated>2020-04-17T16:48:43.330Z</updated>
   <id>https://topking66.gitee.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>排序算法之归并排序</title>
+    <link href="https://topking66.gitee.io/posts/b87d.html"/>
+    <id>https://topking66.gitee.io/posts/b87d.html</id>
+    <published>2020-04-17T16:37:45.000Z</published>
+    <updated>2020-04-17T16:48:43.330Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;归并排序&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200418003321646.png&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="https://topking66.gitee.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="排序" scheme="https://topking66.gitee.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+      <category term="数据结构" scheme="https://topking66.gitee.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C语言和Java中生成随机数</title>
+    <link href="https://topking66.gitee.io/posts/a28a.html"/>
+    <id>https://topking66.gitee.io/posts/a28a.html</id>
+    <published>2020-04-17T15:53:06.000Z</published>
+    <updated>2020-04-17T15:59:11.402Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在实际编程中，我们经常需要生成随机数，例如，实现排序算法的时候通过生成随机数来测试算法的可行性&lt;/p&gt;
+&lt;h2 id=&quot;C语言生成随机数&quot;&gt;&lt;a href=&quot;#C语言生成随机数&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="程序设计" scheme="https://topking66.gitee.io/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+      <category term="随机数" scheme="https://topking66.gitee.io/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/"/>
+    
+      <category term="程序设计" scheme="https://topking66.gitee.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux  Shell编程</title>
