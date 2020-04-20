@@ -169,7 +169,7 @@ $(function () {
 });
 
 
-var title2="msg=KZblog又有新评论啦~！--by Valine\n"
+var title2="msg=你的博客topking又有新评论啦~！--by Valine\n"
 var SCKEY_Qmsg="https://qmsg.zendee.cn:443/send/1ca4b1a95db1caa7e326d088378bf9c6.html"
 var ValineButton=document.getElementsByClassName("vsubmit vbtn")[0];
 function send_valine_Qmsg(){
