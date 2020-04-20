@@ -608,7 +608,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"程序设计","value":1},{"name":"Shell","value":1},{"name":"Linux","value":1},{"name":"数据结构","value":1},{"name":"进程","value":1}],
+                data: [{"name":"Linux","value":1},{"name":"Shell","value":1},{"name":"数据结构","value":1},{"name":"程序设计","value":1},{"name":"进程","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -632,7 +632,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Linux","随机数","程序设计","Shell","Ubuntn","排序","数据结构","进程","线程","隐形守护者"]
+                data: ["Linux","Ubuntn","Shell","排序","数据结构","随机数","程序设计","隐形守护者","游戏","进程"]
             }
         ],
         yAxis: [
@@ -674,6 +674,57 @@
     tagsChart.setOption(tagsOption);
 </script>
 
+                
+                
+<div class="my-projects">
+    <div class="title center-align" data-aos="zoom-in-up">
+        <i class="fas fa-gift"></i>&nbsp;&nbsp;我的项目
+    </div>
+    <div class="row">
+        
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="http://github.com/blinkfox/hexo-theme-matery" class="icon"
+                   style="background: linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <div class="info-title">
+                    <a href="http://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>
+                </div>
+                <div class="info-desc">This is a Hexo blog theme with 'Material Design' and responsive design.</div>
+            </div>
+        </div>
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="https://github.com/blinkfox/fenix" class="icon"
+                   style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
+                    <i class="fas fa-database"></i>
+                </a>
+                <div class="info-title">
+                    <a href="https://github.com/blinkfox/fenix" target="_blank">Fenix</a>
+                </div>
+                <div class="info-desc">这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。</div>
+            </div>
+        </div>
+        
+        <div class="col s12 m6 l4" data-aos="fade-up">
+            <div class="info center-align">
+                <a href="https://github.com/blinkfox/typora-vue-theme" class="icon"
+                   style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                <div class="info-title">
+                    <a href="https://github.com/blinkfox/typora-vue-theme" target="_blank">typora-vue-theme</a>
+                </div>
+                <div class="info-desc">This is a typora theme inspired by Vue document style.</div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
                 
 
                 
@@ -762,28 +813,20 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/">
-                <span class="chip center-align waves-effect waves-light chip-default">随机数</span>
-            </a>
-            
-            
-            
-            
-            
             <a href="/tags/Linux/">
                 <span class="chip center-align waves-effect waves-light chip-default">Linux</span>
             </a>
             
             
             
-            <a href="/tags/Shell/">
-                <span class="chip center-align waves-effect waves-light chip-default">Shell</span>
+            <a href="/tags/Ubuntn/">
+                <span class="chip center-align waves-effect waves-light chip-default">Ubuntn</span>
             </a>
             
             
             
-            <a href="/tags/Ubuntn/">
-                <span class="chip center-align waves-effect waves-light chip-default">Ubuntn</span>
+            <a href="/tags/Shell/">
+                <span class="chip center-align waves-effect waves-light chip-default">Shell</span>
             </a>
             
             
@@ -800,15 +843,11 @@
             
             
             
-            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
+            <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/">
+                <span class="chip center-align waves-effect waves-light chip-default">随机数</span>
             </a>
             
             
-            
-            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
-                <span class="chip center-align waves-effect waves-light chip-default">线程</span>
-            </a>
             
             
             
@@ -823,6 +862,18 @@
             </a>
             
             
+            
+            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">进程</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                <span class="chip center-align waves-effect waves-light chip-default">线程</span>
+            </a>
+            
+            
         </div>
     </div>
     
@@ -832,67 +883,22 @@
                 
 
                 
-                
-<div id="myGallery" class="my-gallery">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="far fa-image"></i>&nbsp;&nbsp;相册
-    </div>
-    <div class="row">
-        
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="/medias/featureimages/0.jpg" class="responsive-img">
+
             </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="/medias/featureimages/1.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="/medias/featureimages/2.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/3.jpg">
-                <img src="/medias/featureimages/3.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/4.jpg">
-                <img src="/medias/featureimages/4.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/5.jpg">
-                <img src="/medias/featureimages/5.jpg" class="responsive-img">
-            </div>
-        </div>
-        
-        
-    </div>
+<div class="card">
+     <div class="card-content">
+         <div class="card-content article-card-content">
+             <div class="title center-align" data-aos="zoom-in-up">
+                 <i class="fa fa-address-book"></i>&nbsp;&nbsp;个人简历
+              </div>
+                 <div id="articleContent" data-aos="fade-up">
+                     <p><strong>路漫漫其修远兮,吾将上下而求索</strong></p>
+
+                 </div>
+           </div>
+      </div>
 </div>
 
-<script>
-    $(function () {
-        let animateClass = 'animated pulse';
-        $('#myGallery .photo').hover(function () {
-            $(this).addClass(animateClass);
-        }, function () {
-            $(this).removeClass(animateClass);
-        });
-    });
-</script>
-                
-
-            </div>
         </div>
     </div>
 </main>
@@ -1122,7 +1128,7 @@ $(function () {
             }
           }
         });
-        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
 
 </html>
 
