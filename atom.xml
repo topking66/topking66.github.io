@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://topking66.gitee.io/"/>
-  <updated>2020-04-18T04:15:03.231Z</updated>
+  <updated>2020-04-22T10:52:19.293Z</updated>
   <id>https://topking66.gitee.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Linux用C语言实现TCP半双工通信和UDP半双工通信</title>
+    <link href="https://topking66.gitee.io/posts/9589.html"/>
+    <id>https://topking66.gitee.io/posts/9589.html</id>
+    <published>2020-04-22T10:47:10.000Z</published>
+    <updated>2020-04-22T10:52:19.293Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;TCP协议-UDP协议介绍&quot;&gt;&lt;a href=&quot;#TCP协议-UDP协议介绍&quot; class=&quot;headerlink&quot; title=&quot;TCP协议/UDP协议介绍&quot;&gt;&lt;/a&gt;TCP协议/UDP协议介绍&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;TCP/IP（Transmission
+        
+      
+    
+    </summary>
+    
+    
+      <category term="网络编程" scheme="https://topking66.gitee.io/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Linux" scheme="https://topking66.gitee.io/tags/Linux/"/>
+    
+      <category term="半双工通信" scheme="https://topking66.gitee.io/tags/%E5%8D%8A%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="C语言" scheme="https://topking66.gitee.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="网络编程" scheme="https://topking66.gitee.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>排序算法之归并排序</title>
