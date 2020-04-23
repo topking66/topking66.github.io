@@ -144,13 +144,31 @@ hexo.extend.filter.register('after_render:html', function (htmlContent) {
          <div></div>
      </div>
  </div>`;
-     if (/<\/head>/gi.test(htmlContent)) {
-         let lastIndex = htmlContent.lastIndexOf('</head>');
+     if (/&lt;\/head&gt;/gi.test(htmlContent)) {
+         let lastIndex = htmlContent.lastIndexOf('');
          htmlContent = htmlContent.substring(0, lastIndex) + injectHead + htmlContent.substring(lastIndex, htmlContent.length);
      }
-     if (/<body>/gi.test(htmlContent)) {
-         let index = htmlContent.indexOf('<body>');
+     if (//gi.test(htmlContent)) {
+         let index = htmlContent.indexOf('');
          htmlContent = htmlContent.substring(0, index) + injectBody + htmlContent.substring(index, htmlContent.length);
      }
      return htmlContent;
- }, 1);
+ }, 1);<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
