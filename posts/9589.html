@@ -761,7 +761,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.4k
+                    4.5k
                 </div>
                 
 
@@ -809,8 +809,9 @@
 </li>
 </ul>
 <hr>
-<h2 id="三种通信方式"><a href="#三种通信方式" class="headerlink" title="三种通信方式"></a>三种通信方式</h2><p> 1、单向通信：又称为单工通信，即只能有一个方向的通信而没有反方向的交互。无线电广播或有线电广播以及电视广播就属于这种类型。<br>单向通信只需要一条信道，而双向交替通信或双向同时通信则都需要两条信道（每个方向各一条）。显然，双向同时通信的传输效率最高。不过应当指出，虽然电信局为打电话的用户提供了双向同时通信的信道，但有效的电话交谈一般都还是双方交替通信。当双方发生争吵时往往就是采用双向同时通信的方式。</p>
-<p>2、半双工通信，是指数据可以沿两个方向传送．但同一时刻一个信道只允许单方向传送，因此义被称为双向交替通信，如图中(b)所示。例如，无线对讲机就是一种半双工设备，在同一时间内只允许一方讲话。</p>
+<h2 id="三种通信方式"><a href="#三种通信方式" class="headerlink" title="三种通信方式"></a>三种通信方式</h2><p><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200423132800473.png?" alt=""></p>
+<p> 1、单向通信：又称为单工通信，即只能有一个方向的通信而没有反方向的交互。无线电广播或有线电广播以及电视广播就属于这种类型。<br>单向通信只需要一条信道，而双向交替通信或双向同时通信则都需要两条信道（每个方向各一条）。显然，双向同时通信的传输效率最高。不过应当指出，虽然电信局为打电话的用户提供了双向同时通信的信道，但有效的电话交谈一般都还是双方交替通信。当双方发生争吵时往往就是采用双向同时通信的方式。</p>
+<p>2、半双工通信，是指数据可以沿两个方向传送．但同一时刻一个信道只允许单方向传送，因此义被称为双向交替通信。例如，无线对讲机就是一种半双工设备，在同一时间内只允许一方讲话。</p>
 <p>3、全双工通信，是指同时发生在两个方向上的一种数据传输方式，如图中(c)所示。电话机就是一种全双工设备，其通话双方可以同时进行对话。计算机之间的高速数据通信也是这种方式。</p>
 <p>双向交替通信又称为半双工通信，即通信的双方都可以发送信息，但不能双方同时发送（当然也就不能同时接收）。这种通信方式是一方发送另一方接收，过一段时间后再反过来。此次要实现的就是半双工通信</p>
 <hr>
@@ -909,14 +910,14 @@ ssize_t <span class="token function">recv</span><span class="token punctuation">
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span> <span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span><span class="token operator">*</span>argv <span class="token punctuation">)</span> <span class="token comment" spellcheck="true">/*接收IP地址和端口号*/</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> sid <span class="token operator">=</span> <span class="token function">socket</span><span class="token punctuation">(</span>AF_INET<span class="token punctuation">,</span>SOCK_STREAM<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//创建socket第一个参数 使用IPv4协议，第二个参数使用流的方式传播，第三个参数默认为0</span>
+    <span class="token comment" spellcheck="true">//创建socket,第一个参数使用IPv4协议，第二个参数使用流的方式传播，第三个参数默认为0</span>
     <span class="token keyword">struct</span> sockaddr_in addr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//定义ip地址</span>
     addr<span class="token punctuation">.</span>sin_family <span class="token operator">=</span> AF_INET<span class="token punctuation">;</span>              <span class="token comment" spellcheck="true">//声明协议用的是IPv4</span>
     addr<span class="token punctuation">.</span>sin_port <span class="token operator">=</span> <span class="token function">htons</span><span class="token punctuation">(</span><span class="token function">atoi</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//绑定到哪一个端口号当中,从第三个参数中获取</span>
 
-    addr<span class="token punctuation">.</span>sin_addr<span class="token punctuation">.</span>s_addr <span class="token operator">=</span> <span class="token function">inet_addr</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//监听哪一个ip地址,从第一个参数中获取</span>
+    addr<span class="token punctuation">.</span>sin_addr<span class="token punctuation">.</span>s_addr <span class="token operator">=</span> <span class="token function">inet_addr</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//监听哪一个ip地址,从第二个参数中获取</span>
     <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token function">bind</span><span class="token punctuation">(</span>sid<span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">struct</span> sockaddr <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>addr<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> sockaddr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//进行绑定,第二个参数为绑定的地址和端口号</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"bind res = %d\n"</span><span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"bind res = %d\n"</span><span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//绑定成功输出0,失败则输出-1</span>
     <span class="token function">listen</span><span class="token punctuation">(</span>sid<span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">//进行监听,第一个参数是监听哪一个socket,第二个是能接受的最大的连接数</span>
     <span class="token keyword">char</span> read_buf<span class="token punctuation">[</span><span class="token number">128</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//储存客户端发来的信息</span>
@@ -933,8 +934,8 @@ ssize_t <span class="token function">recv</span><span class="token punctuation">
            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"client quit the communication!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
            <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-           <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"client:%s"</span><span class="token punctuation">,</span>read_buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
-           <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"server:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"client:%s"</span><span class="token punctuation">,</span>read_buf<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//输出客户端发送的信息</span>
+           <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"server:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            
         <span class="token function">fgets</span><span class="token punctuation">(</span>write_buf<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>write_buf<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">write</span><span class="token punctuation">(</span>cid<span class="token punctuation">,</span>write_buf<span class="token punctuation">,</span><span class="token function">strlen</span><span class="token punctuation">(</span>write_buf<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
         <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>write_buf<span class="token punctuation">,</span><span class="token string">"quit\n"</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//发出信息quit，结束本次通信</span>
@@ -959,7 +960,7 @@ ssize_t <span class="token function">recv</span><span class="token punctuation">
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token operator">*</span>argv<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">/*接收IP地址和端口号*/</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>argc <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">//参数必须为三个</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>argc <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span>        <span class="token comment" spellcheck="true">//参数必须为三个</span>
     <span class="token punctuation">{</span>
         <span class="token function">perror</span><span class="token punctuation">(</span><span class="token string">"param must >= 3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
@@ -994,12 +995,13 @@ ssize_t <span class="token function">recv</span><span class="token punctuation">
            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"sever quit the communication!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
            <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"server:%s"</span><span class="token punctuation">,</span>read_buf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"server:%s"</span><span class="token punctuation">,</span>read_buf<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">//输出客户端发送的信息</span>
     <span class="token punctuation">}</span>
     <span class="token function">close</span><span class="token punctuation">(</span>cid<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p>127.0.0.1是回送地址，指本地机，一般用来测试使用。回送地址（127.x.x.x）是本机回送地址（Loopback Address），即主机IP堆栈内部的IP地址，主要用于网络软件测试以及本地机进程间通信，无论什么程序，一旦使用回送地址发送数据，协议软件立即返回，不进行任何网络传输。</p>
 <p>在Windows系统中，这个地址有一个别名“Localhost”。寻址这样一个地址，是不能发到网络接口的。除非出错，否则在传输介质上永远不应该出现目的地址为“127.0.0.1”的数据包。</p>
+<p><strong>运行程序需要打开Linux中打开两个终端,分别编译运行服务端和客户端的源文件,IP地址选择本地地址,端口号建议选择8000以上比较稳定比如9999,首先客户端发送信息到服务端,服务端在接收到客户端的信息后才可以回复,双方都可以输出quit来结束本次通信</strong></p>
 <p>客户端：</p>
 <p><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200422175007901.png?" alt=""></p>
 <p>服务端：<br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200422175105211.png" alt=""></p>
@@ -1133,6 +1135,9 @@ ssize_t <span class="token function">recv</span><span class="token punctuation">
 <p><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200422180929422.png?" alt=""></p>
 <hr>
 <h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://blog.csdn.net/apollon_krj/article/details/53398448" target="_blank" rel="noopener">https://blog.csdn.net/apollon_krj/article/details/53398448</a><br><a href="https://zhuanlan.zhihu.com/p/24860273" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/24860273</a><br><a href="https://www.cnblogs.com/lightice/p/12726717.html" target="_blank" rel="noopener">https://www.cnblogs.com/lightice/p/12726717.html</a></p>
+<hr>
+<hr>
+<p>本文结束,感谢您的阅读！</p>
 
             </div>
             <hr/>
@@ -1919,7 +1924,7 @@ TCP/IP（Transmission Control Protocol/Internet Protocol，传输控制协议/�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="blue-color">10k</span>&nbsp;字
+                class="blue-color">10.2k</span>&nbsp;字
             
             
             
