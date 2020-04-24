@@ -866,7 +866,7 @@ do
      sum=$[$sum+$i]
 done
 
-echo "sum = $sum"
+echo &quot;sum = $sum&quot;
 </code></pre><p>运行结果：<br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200412121129926.png?" alt=""></p>
 <p><strong>3、环境变量</strong><br>    环境变量默认存在，一般包含下面几个：<br>    （1）HOME：用户主目录<br>（2）PATH：系统环境变量 PATH<br>（3）TERM：当前终端<br>（4）UID：当前用户 ID<br>（5）PWD：当前工作目录，绝对路径</p>
 <h3 id="Shell运算"><a href="#Shell运算" class="headerlink" title="Shell运算"></a>Shell运算</h3><p>Shell比较常见的运算包括以下4中，功能都是将m+1：</p>
@@ -880,21 +880,21 @@ echo "sum = $sum"
 <pre><code>INPUT=10
 if test $INPUT -eq 10
 then
-  echo "hello"
+  echo &quot;hello&quot;
   else
-    echo "Shell"
+    echo &quot;Shell&quot;
     fi</code></pre><h4 id="case语句"><a href="#case语句" class="headerlink" title="case语句"></a>case语句</h4><p><strong>case语句相当于C语言中的switch,所以当然case语句也可以用if语句来实现，case语句格式较复杂，请注意使用细节</strong><br><strong>例如：</strong></p>
 <pre><code>#!/bin/bash
 read NAME                      #类似于scanf
 case $NAME in
-     "Linux")
-     echo "Linux"
+     &quot;Linux&quot;)
+     echo &quot;Linux&quot;
      ;;
-      "hello")
-     echo "hello"
+      &quot;hello&quot;)
+     echo &quot;hello&quot;
      ;;
         *)                     #跟switch中的default类似
-     echo "other"
+     echo &quot;other&quot;
      ;;
      esac                         #case语句结束标志</code></pre><h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p><strong>Shell编程中for语句与C语言类似，用于程序循环，也可构成循环嵌套形</strong></p>
 <p><strong>for循环语句格式</strong><br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200412132359832.png?" alt=""><br><strong>Shell中的for循环要在执行语句的前面加上do，在执行语句后加上done</strong><br>另外在Shell中break,continue的用法和在C语言中的用法一致</p>
@@ -907,7 +907,7 @@ case $NAME in
 <li>输出hello Shell!</li>
 </ul>
 <pre><code>#!/bin/bash
-echo "hello Shell!"</code></pre><ul>
+echo &quot;hello Shell!&quot;</code></pre><ul>
 <li>赋予hello.sh可执行权限</li>
 </ul>
 <pre><code>chmod a+x hello.sh</code></pre><ul>
@@ -926,25 +926,7 @@ echo "hello Shell!"</code></pre><ul>
 <li><a href="https://www.cnblogs.com/CherishFX/p/4558958.html" target="_blank" rel="noopener">Linux Shell 程序调试</a></li>
 <li><a href="http://c.biancheng.net/view/810.html" target="_blank" rel="noopener">Shell数组</a></li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1709,7 +1691,7 @@ C语言生成随机数  在C语言中，我们一般使用 &lt;stdlib.h&gt; 头�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="blue-color">10.5k</span>&nbsp;字
+                class="blue-color">11.6k</span>&nbsp;字
             
             
             

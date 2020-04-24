@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://topking66.gitee.io/"/>
-  <updated>2020-04-23T06:43:51.034Z</updated>
+  <updated>2020-04-24T15:45:44.289Z</updated>
   <id>https://topking66.gitee.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>动态规划之01背包问题</title>
+    <link href="https://topking66.gitee.io/posts/173e.html"/>
+    <id>https://topking66.gitee.io/posts/173e.html</id>
+    <published>2020-04-24T15:40:03.000Z</published>
+    <updated>2020-04-24T15:45:44.289Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;问题描述&lt;/strong&gt;&lt;br&gt;给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：&lt;br&gt;     物品编号   1   2   3   4  
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://topking66.gitee.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://topking66.gitee.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="动态规划" scheme="https://topking66.gitee.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Linux用C语言实现TCP半双工通信和UDP半双工通信</title>
@@ -178,7 +207,7 @@
     
       &lt;hr&gt;
 &lt;h1 id=&quot;基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题&quot;&gt;&lt;a href=&quot;#基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题&quot; class=&quot;headerlink&quot; title=&quot;基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题&quot;&gt;&lt;/a&gt;基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好，后面第二次打开的时候经常会出现开Ubuntn会黑屏无法正常启动，它就搁那一动不动，想关它的时候一直显示虚拟机繁忙，除了重启电脑或者用任务管理器结束进程一点办法没有&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好，后面第二次打开的时候经常会出现开Ubuntn会黑屏无法正常启动，它就搁那一动不动，想关它的时候一直显示虚拟机繁忙，除了重启电脑或者用任务管理器结束进程一点办法没有&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -203,7 +232,7 @@
     
       &lt;ul&gt;
 &lt;li&gt;&lt;h1 id=&quot;进程与线程———我的第一篇博客&quot;&gt;&lt;a href=&quot;#进程与线程———我的第一篇博客&quot; class=&quot;headerlink&quot; title=&quot;进程与线程———我的第一篇博客&quot;&gt;&lt;/a&gt;&lt;strong&gt;进程与线程———我的第一篇博客&lt;/strong&gt;&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;strong&gt;没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序&lt;/strong&gt;
     
     </summary>
     

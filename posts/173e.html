@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="进程与线程, hexo,学习,Java,sql">
+    <meta name="keywords" content="动态规划之01背包问题, hexo,学习,Java,sql">
     <meta name="description" content="落叶的一生,只是为了归根吗">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>进程与线程 | topking</title>
+    <title>动态规划之01背包问题 | topking</title>
     <link rel="icon" type="image/png" href="/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -607,12 +607,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">进程与线程</h1>
+                    <h1 class="description center-align post-title">动态规划之01背包问题</h1>
                 </div>
             </div>
         </div>
@@ -737,12 +737,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                                <span class="chip bg-color">进程</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/%E7%BA%BF%E7%A8%8B/">
-                                <span class="chip bg-color">线程</span>
+                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
                             </a>
                         
                     </div>
@@ -753,8 +753,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BF%9B%E7%A8%8B/" class="post-category">
-                                进程
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -766,7 +766,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-01
+                    2020-04-24
                 </div>
                 
 
@@ -775,7 +775,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    631
+                    1.5k
                 </div>
                 
 
@@ -793,17 +793,106 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li><h1 id="进程与线程———我的第一篇博客"><a href="#进程与线程———我的第一篇博客" class="headerlink" title="进程与线程———我的第一篇博客"></a><strong>进程与线程———我的第一篇博客</strong></h1></li>
-<li><strong>没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序</strong><a id="more"></a></li>
-<li><strong>程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它对应了从代码加载，执行至执行完毕的一个过程，这个过程也是进程本身从产生，发展，至消亡的过程。现在的操作系统可以管理一个计算机系统中的多个进程，即可以让计算机系统中的多个进程轮流使用CPU资源</strong></li>
-<li><strong>线程的行为很像进程，线程是比进程更小的执行单位，一个进程在执行过程中可以产生多个线程，形成多条执行线索。线程可以共享进程中的某些内存单元，并利用这些内存单元进行数据交换实时通信与必要的操作，但与进程不同的是，线程的中断和恢复可以更加节省系统的开销。具有多个线程的进程能更好的表达和解决现实世界中的具体问题，多进程是计算机应用开发和程序设计的一项重要的实用技术</strong></li>
-</ul>
-<ul>
-<li><strong>每个Java应用程序都有一个默认的主线程，Java应用程序总是从主类的main方法开始执行。当JVM开始加载代码，发现main方法之后，就会启动一个线程，这个线程被称作主线程，该线程负责执行main方法。在main方法的执行中再创建的线程，就被称为程序中的其它线程。如果main方法中没有创建其它的线程，那么当main方法执行完最后一个语句，即当main方法返回时，JVM就会结束Java应用程序。如果main方法又创建了其它线程，那么JVM就要在主线程和其它线程之间轮流切换，保证每个线程都有机会使用 CPU资源，main方法即使执行完最后的语句（主线程结束）JVM也不会结束JAVA应用程序，JVM要一直等到Java用应程序中的所有线程都结束之后，才结束Java 应用程序</strong></li>
-</ul>
-<hr>
-<h2 id="github"><a href="#github" class="headerlink" title="github"></a><a href="https://github.com/topking66" target="_blank" rel="noopener">github</a></h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><strong>Java程序设计精编教程</strong></p>
+                <p><strong>问题描述</strong><br>给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：<br>     物品编号   1   2   3   4   5<br>      重量W     3   4   7   8   9<br>      价值V     4   5   10  11  13</p>
+<p><strong>解题思路</strong><br>动态规划原理：是一种将问题实例分解为更小的、相似的子问题，并存储子问题的解而避免计算重复的子问题，以解决最优化问题的算法方法。0/1背包问题可以看作是决策一个序列（x1,x2,x3,x4,….xn）,对任一变量xi的决策是决定xi=1，还是xi=0。在对xi-1决策后，已确定了（x1,x2,x3,x4,….xi-1），在决策xi时，问题处于两种状态之一：<br>背包容量不足以装入物品i，则xi=0，背包不增加价值；<br>背包容量可以装入物品i，则xi=1，背包价值增加了 vi；<br>   这两种情况下背包价值的最大者应该是对xi决策后的背包价值。<br>    令v（i，j）表示装载前i种物品，总重量不超过j时背包的最大价值<br>    面对当前商品有两种可能性：<br>  包的容量比该商品体积小，装不下，此时的价值与前i-1个的价值是一样的，即V(i,j)=V(i-1,j)；<br>还有足够的容量可以装该商品，但装了也不一定达到当前最优价值，所以在装与不装之间选择最优的一个，即V(i,j)=max｛V(i-1,j)，V(i-1,j-w(i))+v(i)｝。<br>其中V(i-1,j)表示不装，V(i-1,j-w(i))+v(i) 表示装了第i个商品，背包容量减少w(i)，但价值增加了v(i)；</p>
+<p>由此可以得出递推关系式：<br>j&lt;w(i)      V(i,j)=V(i-1,j)<br>j&gt;=w(i)     V(i,j)=max｛V(i-1,j)，V(i-1,j-w(i))+v(i)｝</p>
+<p>根据递推公式,可以逐步求出当物品数为i,背包容量为j时的背包最大总价值，<br>但在求解之前，要将边界初始化<br>显然的 v(0,j)=0，v(i,0)=0</p>
+<p><strong>构造最优解</strong><br>通过上面的方法可以求出背包问题的最优解，但还不知道这个最优解由哪些商品组成，可以通过最优解回溯找出解的组成：</p>
+<p>我们可以声明一个长度为6的数组content[6]来标记物品是否选取，content[1]~content[5]分别对应物品1到物品5，将数组初始化为0，<br>1表示选取该物品，0表示不选取<br>V(i,j)=V(i-1,j) 或者  j - w[i] &lt;0 时，说明没有选择第i 个商品，则回到V(i-1,j)；<br>否则即说明装了第i个商品，该商品是最优解组成的一部分，content[i]=1，然后回到V(i-1,j-w(i))；<br>一直遍历到i＝0结束为止,我们能找到所有解的组成</p>
+<p>源代码：</p>
+<pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*本关任务：给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：
+     物品编号   1   2   3   4   5
+      重量W    3   4   7   8   9
+      价值V    4   5   10  11  13
+求: 如何选择装入背包的物品，使得装入背包的物品的总价值为最大.
+
+*/</span>
+
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> content<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>              <span class="token comment" spellcheck="true">//最优解的物品组成</span>
+<span class="token keyword">int</span> w<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//物品对应的重量</span>
+<span class="token keyword">int</span> v<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">}</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">//物品对应的价值</span>
+<span class="token keyword">int</span> bV<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">;</span>                       <span class="token comment" spellcheck="true">//背包的最大容量为15</span>
+<span class="token keyword">int</span> maxVal<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">16</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//存放当物品数为i,背包容量为j的最大总价值</span>
+
+<span class="token keyword">void</span> <span class="token function">findContent</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//找到最优解的物品组成</span>
+
+<span class="token keyword">void</span> <span class="token function">findMax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 <span class="token comment" spellcheck="true">//寻找当物品数为i,背包容量为j时的最大总价值</span>
+
+<span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment" spellcheck="true">//打印最优解物品组成</span>
+
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span> <span class="token keyword">void</span> <span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"当物品数为i,背包容量为j时的能装入背包的最大总价值\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">findMax</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">6</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//打印当物品数为i,背包容量为j时的最大总价值</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span><span class="token number">16</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%2d  "</span><span class="token punctuation">,</span>maxVal<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入当前的物品数："</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入当前背包的最大容量: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">findContent</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"最优解的物品组成为： \n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> <span class="token number">6</span><span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>content<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"价值为 %d ,重量为 %d 的 %d 号物品\n"</span><span class="token punctuation">,</span>v<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">,</span>w<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"物品数为%d 背包容量为 %d时的最大总价值为 %d\n"</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>maxVal<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span>  <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">void</span> <span class="token function">findMax</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//寻找当物品数为i,背包容量为j时的最大总价值</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">6</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span><span class="token number">16</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+ <span class="token punctuation">{</span>
+       <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> w<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">//如果背包容量小于物品i重量，表示背包存放不下第i种物品,此时的最大总价值为i-1种物品的最大总价值</span>
+                maxVal<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> maxVal<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>maxVal<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">></span><span class="token punctuation">(</span>maxVal<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span>w<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">+</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//放下第i种物品时的总价值为第i种物品的价值加上当物品数为i-1背包容量为j-w[i]的最优解</span>
+            maxVal<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>maxVal<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>             <span class="token comment" spellcheck="true">// 对比当放下第i种物品时的总价值和物品数位i-1时的总价值，取最大值</span>
+        <span class="token keyword">else</span>
+            maxVal<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>maxVal<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span>w<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">+</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+ <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">findContent</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token comment" spellcheck="true">//最优解组成</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">></span> <span class="token number">0</span> <span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>maxVal<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> maxVal<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">||</span> j <span class="token operator">-</span> w<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            content<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token function">findContent</span><span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+         <span class="token punctuation">{</span>
+            content<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token function">findContent</span><span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> j <span class="token operator">-</span> w<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>运行结果：</strong><br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200424233850178.png?" alt=""></p>
 
             </div>
             <hr/>
@@ -829,7 +918,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://topking66.gitee.io/posts/275f.html">https://topking66.gitee.io/posts/275f.html</a>
+                    <a href="https://topking66.gitee.io/posts/173e.html">https://topking66.gitee.io/posts/173e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -867,12 +956,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                                    <span class="chip bg-color">进程</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BA%BF%E7%A8%8B/">
-                                    <span class="chip bg-color">线程</span>
+                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
                                 </a>
                             
                         </div>
@@ -1325,37 +1414,91 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/c971.html">
+                <a href="/posts/173e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="Ubuntn黑屏问题">
+                        <img src="/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="动态规划之01背包问题">
                         
-                        <span class="card-title">Ubuntn黑屏问题</span>
+                        <span class="card-title">动态规划之01背包问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题
-在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -deskto
+                            问题描述给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：     物品编号   1   2   3   4   5      重量W  
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/9589.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="基于Linux用C语言实现TCP半双工通信和UDP半双工通信">
+                        
+                        <span class="card-title">基于Linux用C语言实现TCP半双工通信和UDP半双工通信</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            TCP协议/UDP协议介绍
+TCP/IP（Transmission Control Protocol/Internet Protocol，传输控制协议/网际协议）是指能够在多个不同网络间实现信息传输的协议簇。TCP/IP协议不仅仅指的是TC
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    网络编程
                                 </a>
                             
                             
@@ -1369,65 +1512,16 @@
                         <span class="chip bg-color">Linux</span>
                     </a>
                     
-                    <a href="/tags/Ubuntn/">
-                        <span class="chip bg-color">Ubuntn</span>
+                    <a href="/tags/%E5%8D%8A%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1/">
+                        <span class="chip bg-color">半双工通信</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/275f.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="进程与线程">
-                        
-                        <span class="card-title">进程与线程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-进程与线程———我的第一篇博客
-没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序
-程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%BF%9B%E7%A8%8B/" class="post-category">
-                                    进程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%BF%9B%E7%A8%8B/">
-                        <span class="chip bg-color">进程</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
-                    <a href="/tags/%E7%BA%BF%E7%A8%8B/">
-                        <span class="chip bg-color">线程</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">网络编程</span>
                     </a>
                     
                 </div>
