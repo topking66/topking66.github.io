@@ -796,10 +796,11 @@
                 <p><strong>问题描述</strong><br>给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：<br>     物品编号   1   2   3   4   5<br>      重量W     3   4   7   8   9<br>      价值V     4   5   10  11  13</p>
 <p><strong>解题思路</strong><br>动态规划原理：是一种将问题实例分解为更小的、相似的子问题，并存储子问题的解而避免计算重复的子问题，以解决最优化问题的算法方法。0/1背包问题可以看作是决策一个序列（x1,x2,x3,x4,….xn）,对任一变量xi的决策是决定xi=1，还是xi=0。在对xi-1决策后，已确定了（x1,x2,x3,x4,….xi-1），在决策xi时，问题处于两种状态之一：<br>背包容量不足以装入物品i，则xi=0，背包不增加价值；<br>背包容量可以装入物品i，则xi=1，背包价值增加了 vi；<br>   这两种情况下背包价值的最大者应该是对xi决策后的背包价值。<br>    令v（i，j）表示装载前i种物品，总重量不超过j时背包的最大价值<br>    面对当前商品有两种可能性：<br>  包的容量比该商品体积小，装不下，此时的价值与前i-1个的价值是一样的，即V(i,j)=V(i-1,j)；<br>还有足够的容量可以装该商品，但装了也不一定达到当前最优价值，所以在装与不装之间选择最优的一个，即V(i,j)=max｛V(i-1,j)，V(i-1,j-w(i))+v(i)｝。<br>其中V(i-1,j)表示不装，V(i-1,j-w(i))+v(i) 表示装了第i个商品，背包容量减少w(i)，但价值增加了v(i)；</p>
 <p>由此可以得出递推关系式：<br>j&lt;w(i)      V(i,j)=V(i-1,j)<br>j&gt;=w(i)     V(i,j)=max｛V(i-1,j)，V(i-1,j-w(i))+v(i)｝</p>
-<p>根据递推公式,可以逐步求出当物品数为i,背包容量为j时的背包最大总价值，<br>但在求解之前，要将边界初始化<br>显然的 v(0,j)=0，v(i,0)=0</p>
+<p>根据递推公式,可以逐步求出当物品数为 i ,背包容量为 j 时的背包最大总价值，<br>但在求解之前，要将边界初始化<br>显然的 v(0,j)=0，v(i,0)=0</p>
 <p><strong>构造最优解</strong><br>通过上面的方法可以求出背包问题的最优解，但还不知道这个最优解由哪些商品组成，可以通过最优解回溯找出解的组成：</p>
 <p>我们可以声明一个长度为6的数组content[6]来标记物品是否选取，content[1]~content[5]分别对应物品1到物品5，将数组初始化为0，<br>1表示选取该物品，0表示不选取<br>V(i,j)=V(i-1,j) 或者  j - w[i] &lt;0 时，说明没有选择第i 个商品，则回到V(i-1,j)；<br>否则即说明装了第i个商品，该商品是最优解组成的一部分，content[i]=1，然后回到V(i-1,j-w(i))；<br>一直遍历到i＝0结束为止,我们能找到所有解的组成</p>
-<p>源代码：</p>
+<p>(ps:对我来说,单纯看理论概念很容易烦躁而且很难理解，通过源代码结合概念能够有更清晰的认识）</p>
+<p><strong>源代码</strong>：</p>
 <pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*本关任务：给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：
      物品编号   1   2   3   4   5
       重量W    3   4   7   8   9
@@ -892,7 +893,7 @@
 
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>运行结果：</strong><br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200424233850178.png?" alt=""></p>
+<p><strong>运行结果</strong><br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200425095631713.png?" alt=""></p>
 
             </div>
             <hr/>
@@ -1671,7 +1672,7 @@ TCP/IP（Transmission Control Protocol/Internet Protocol，传输控制协议/�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="blue-color">11.6k</span>&nbsp;字
+                class="blue-color">11.7k</span>&nbsp;字
             
             
             
@@ -1882,7 +1883,7 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
 
 </html>
 
