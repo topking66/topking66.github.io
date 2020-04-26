@@ -603,7 +603,143 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    <style>
+    /*归档页自定义样式*/
+    .archive-container{
+      padding: 20px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .archive:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    
+    .archive .articles {
+      border-left: 1px solid #dbdbdb;
+    }
+    
+    .archive .article {
+      border-top: none;
+      margin-left: -1px;
+      padding: 0.4rem 1.5rem;
+      border-left: 3px solid transparent;
+    }
+    
+    .archive .article:hover {
+      transition: all .6s;
+      -webkit-transition: all .6s;
+      -o-transition: all .6s;
+      -moz-transition: all .6s;
+      border-left-color: #0f9d58 ;
+    }
+    
+    .archive .article time {
+      font-size: 1rem;
+      color: deeppink;
+      /* color: darkgray; */
+    }
+    article-sort-item_title{
+      display: -webkit-box;
+      overflow: hidden;
+      height: 60px;
+      color: #4c4948;
+      font-size: .75rem;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -o-transition: all .3s;
+      -ms-transition: all .3s;
+      transition: all .3s;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    
+    .archive .article h6 {
+      margin: 0;
+    }
+    
+    .archive .article h6 a {
+      line-height: 2.5;
+      color: inherit;
+      border-bottom: 1px dashed transparent;
+    }
+    
+    .archive .article h6 a:hover {
+      border-bottom-color: #0f9d58;
+      padding-left: 16px;
+      transition: all .5s;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      -moz-transition: all .5s;
+    }
+    
+    .archive .articles .imgcontent{
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+    }
+    
+    .archive .articles .imgcontent .postimg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .archive .articles .imgcontent .postimg:hover{
+      transform: scale(1.3);
+      transition: all .6s;
+      -webkit-transition: all .6s;
+      -o-transition: all .6s;
+      -moz-transition: all .6s;
+    }
+    .article-sort-post{
+      display: inline-block;
+      position: relative;
+      top: -16px;
+      left: 10px;
+    }
+    
+    .hbe-input-container{
+      width: 80%;
+      max-width: 800px;
+      position: relative;
+      margin: 100px auto;
+    }
+    
+    .hbe-input-container  .btn-decrypt{
+      display: inline-block;
+      vertical-align: top;
+      width: 120px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #3f90ff;
+      text-align: center;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+    .about-cover {
+      height: 50vh;
+    }
+    .desc-content{
+      padding: 0 50px;
+    }
+    @media only screen and (max-width: 601px) {
+      .desc-content {
+        padding: 0 15px;
+      }
+    }
+    
+    .v .vlist .vcard {
+      padding-top: 2.5em !important;
+    }
+    
+ </style>
+
+<div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -660,7 +796,7 @@
 <main class="content">
 
     
-    <div class="container archive-calendar">
+        <div class="container archive-calendar">
     <div class="card">
         <div id="post-calendar" class="card-content"></div>
     </div>
@@ -708,7 +844,7 @@
         },
         calendar: [{
             left: 'center',
-            range: ["2019-04-25", "2020-04-25"],
+            range: ["2019-04-26", "2020-04-26"],
             cellSize: [13, 13],
             splitLine: {
                 show: false
@@ -735,7 +871,7 @@
             type: 'heatmap',
             coordinateSystem: 'calendar',
             calendarIndex: 0,
-            data: [["2019-04-25", 0], ["2019-04-26", 0], ["2019-04-27", 0], ["2019-04-28", 0], ["2019-04-29", 0], ["2019-04-30", 0], ["2019-05-01", 0], ["2019-05-02", 0], ["2019-05-03", 0], ["2019-05-04", 0], ["2019-05-05", 0], ["2019-05-06", 0], ["2019-05-07", 0], ["2019-05-08", 0], ["2019-05-09", 0], ["2019-05-10", 0], ["2019-05-11", 0], ["2019-05-12", 0], ["2019-05-13", 0], ["2019-05-14", 0], ["2019-05-15", 0], ["2019-05-16", 0], ["2019-05-17", 0], ["2019-05-18", 0], ["2019-05-19", 0], ["2019-05-20", 0], ["2019-05-21", 0], ["2019-05-22", 0], ["2019-05-23", 0], ["2019-05-24", 0], ["2019-05-25", 0], ["2019-05-26", 0], ["2019-05-27", 0], ["2019-05-28", 0], ["2019-05-29", 0], ["2019-05-30", 0], ["2019-05-31", 0], ["2019-06-01", 0], ["2019-06-02", 0], ["2019-06-03", 0], ["2019-06-04", 0], ["2019-06-05", 0], ["2019-06-06", 0], ["2019-06-07", 0], ["2019-06-08", 0], ["2019-06-09", 0], ["2019-06-10", 0], ["2019-06-11", 0], ["2019-06-12", 0], ["2019-06-13", 0], ["2019-06-14", 0], ["2019-06-15", 0], ["2019-06-16", 0], ["2019-06-17", 0], ["2019-06-18", 0], ["2019-06-19", 0], ["2019-06-20", 0], ["2019-06-21", 0], ["2019-06-22", 0], ["2019-06-23", 0], ["2019-06-24", 0], ["2019-06-25", 0], ["2019-06-26", 0], ["2019-06-27", 0], ["2019-06-28", 0], ["2019-06-29", 0], ["2019-06-30", 0], ["2019-07-01", 0], ["2019-07-02", 0], ["2019-07-03", 0], ["2019-07-04", 0], ["2019-07-05", 0], ["2019-07-06", 0], ["2019-07-07", 0], ["2019-07-08", 0], ["2019-07-09", 0], ["2019-07-10", 0], ["2019-07-11", 0], ["2019-07-12", 0], ["2019-07-13", 0], ["2019-07-14", 0], ["2019-07-15", 0], ["2019-07-16", 0], ["2019-07-17", 0], ["2019-07-18", 0], ["2019-07-19", 0], ["2019-07-20", 0], ["2019-07-21", 0], ["2019-07-22", 0], ["2019-07-23", 0], ["2019-07-24", 0], ["2019-07-25", 0], ["2019-07-26", 0], ["2019-07-27", 0], ["2019-07-28", 0], ["2019-07-29", 0], ["2019-07-30", 0], ["2019-07-31", 0], ["2019-08-01", 0], ["2019-08-02", 0], ["2019-08-03", 0], ["2019-08-04", 0], ["2019-08-05", 0], ["2019-08-06", 0], ["2019-08-07", 0], ["2019-08-08", 0], ["2019-08-09", 0], ["2019-08-10", 0], ["2019-08-11", 0], ["2019-08-12", 0], ["2019-08-13", 0], ["2019-08-14", 0], ["2019-08-15", 0], ["2019-08-16", 0], ["2019-08-17", 0], ["2019-08-18", 0], ["2019-08-19", 0], ["2019-08-20", 0], ["2019-08-21", 0], ["2019-08-22", 0], ["2019-08-23", 0], ["2019-08-24", 0], ["2019-08-25", 0], ["2019-08-26", 0], ["2019-08-27", 0], ["2019-08-28", 0], ["2019-08-29", 0], ["2019-08-30", 0], ["2019-08-31", 0], ["2019-09-01", 0], ["2019-09-02", 0], ["2019-09-03", 0], ["2019-09-04", 0], ["2019-09-05", 0], ["2019-09-06", 0], ["2019-09-07", 0], ["2019-09-08", 0], ["2019-09-09", 0], ["2019-09-10", 0], ["2019-09-11", 0], ["2019-09-12", 0], ["2019-09-13", 0], ["2019-09-14", 0], ["2019-09-15", 0], ["2019-09-16", 0], ["2019-09-17", 0], ["2019-09-18", 0], ["2019-09-19", 0], ["2019-09-20", 0], ["2019-09-21", 0], ["2019-09-22", 0], ["2019-09-23", 0], ["2019-09-24", 0], ["2019-09-25", 0], ["2019-09-26", 0], ["2019-09-27", 0], ["2019-09-28", 0], ["2019-09-29", 0], ["2019-09-30", 0], ["2019-10-01", 0], ["2019-10-02", 0], ["2019-10-03", 0], ["2019-10-04", 0], ["2019-10-05", 0], ["2019-10-06", 0], ["2019-10-07", 0], ["2019-10-08", 0], ["2019-10-09", 0], ["2019-10-10", 0], ["2019-10-11", 0], ["2019-10-12", 0], ["2019-10-13", 0], ["2019-10-14", 0], ["2019-10-15", 0], ["2019-10-16", 0], ["2019-10-17", 0], ["2019-10-18", 0], ["2019-10-19", 0], ["2019-10-20", 0], ["2019-10-21", 0], ["2019-10-22", 0], ["2019-10-23", 0], ["2019-10-24", 0], ["2019-10-25", 0], ["2019-10-26", 0], ["2019-10-27", 0], ["2019-10-28", 0], ["2019-10-29", 0], ["2019-10-30", 0], ["2019-10-31", 0], ["2019-11-01", 0], ["2019-11-02", 0], ["2019-11-03", 0], ["2019-11-04", 0], ["2019-11-05", 0], ["2019-11-06", 0], ["2019-11-07", 0], ["2019-11-08", 0], ["2019-11-09", 0], ["2019-11-10", 0], ["2019-11-11", 0], ["2019-11-12", 0], ["2019-11-13", 0], ["2019-11-14", 0], ["2019-11-15", 0], ["2019-11-16", 0], ["2019-11-17", 0], ["2019-11-18", 0], ["2019-11-19", 0], ["2019-11-20", 0], ["2019-11-21", 0], ["2019-11-22", 0], ["2019-11-23", 0], ["2019-11-24", 0], ["2019-11-25", 0], ["2019-11-26", 0], ["2019-11-27", 0], ["2019-11-28", 0], ["2019-11-29", 0], ["2019-11-30", 0], ["2019-12-01", 0], ["2019-12-02", 0], ["2019-12-03", 0], ["2019-12-04", 0], ["2019-12-05", 0], ["2019-12-06", 0], ["2019-12-07", 0], ["2019-12-08", 0], ["2019-12-09", 0], ["2019-12-10", 0], ["2019-12-11", 0], ["2019-12-12", 0], ["2019-12-13", 0], ["2019-12-14", 0], ["2019-12-15", 0], ["2019-12-16", 0], ["2019-12-17", 0], ["2019-12-18", 0], ["2019-12-19", 0], ["2019-12-20", 0], ["2019-12-21", 0], ["2019-12-22", 0], ["2019-12-23", 0], ["2019-12-24", 0], ["2019-12-25", 0], ["2019-12-26", 0], ["2019-12-27", 0], ["2019-12-28", 0], ["2019-12-29", 0], ["2019-12-30", 0], ["2019-12-31", 0], ["2020-01-01", 0], ["2020-01-02", 0], ["2020-01-03", 0], ["2020-01-04", 0], ["2020-01-05", 0], ["2020-01-06", 0], ["2020-01-07", 0], ["2020-01-08", 0], ["2020-01-09", 0], ["2020-01-10", 0], ["2020-01-11", 0], ["2020-01-12", 0], ["2020-01-13", 0], ["2020-01-14", 0], ["2020-01-15", 0], ["2020-01-16", 0], ["2020-01-17", 0], ["2020-01-18", 0], ["2020-01-19", 0], ["2020-01-20", 0], ["2020-01-21", 0], ["2020-01-22", 0], ["2020-01-23", 0], ["2020-01-24", 0], ["2020-01-25", 0], ["2020-01-26", 0], ["2020-01-27", 0], ["2020-01-28", 0], ["2020-01-29", 0], ["2020-01-30", 0], ["2020-01-31", 0], ["2020-02-01", 0], ["2020-02-02", 0], ["2020-02-03", 0], ["2020-02-04", 0], ["2020-02-05", 0], ["2020-02-06", 0], ["2020-02-07", 0], ["2020-02-08", 0], ["2020-02-09", 0], ["2020-02-10", 0], ["2020-02-11", 0], ["2020-02-12", 0], ["2020-02-13", 0], ["2020-02-14", 0], ["2020-02-15", 0], ["2020-02-16", 0], ["2020-02-17", 0], ["2020-02-18", 0], ["2020-02-19", 0], ["2020-02-20", 0], ["2020-02-21", 0], ["2020-02-22", 0], ["2020-02-23", 0], ["2020-02-24", 0], ["2020-02-25", 0], ["2020-02-26", 0], ["2020-02-27", 0], ["2020-02-28", 0], ["2020-02-29", 0], ["2020-03-01", 0], ["2020-03-02", 0], ["2020-03-03", 0], ["2020-03-04", 0], ["2020-03-05", 0], ["2020-03-06", 0], ["2020-03-07", 0], ["2020-03-08", 0], ["2020-03-09", 0], ["2020-03-10", 0], ["2020-03-11", 0], ["2020-03-12", 0], ["2020-03-13", 0], ["2020-03-14", 0], ["2020-03-15", 0], ["2020-03-16", 0], ["2020-03-17", 0], ["2020-03-18", 0], ["2020-03-19", 0], ["2020-03-20", 0], ["2020-03-21", 0], ["2020-03-22", 0], ["2020-03-23", 0], ["2020-03-24", 0], ["2020-03-25", 0], ["2020-03-26", 0], ["2020-03-27", 0], ["2020-03-28", 0], ["2020-03-29", 0], ["2020-03-30", 0], ["2020-03-31", 0], ["2020-04-01", 2], ["2020-04-02", 0], ["2020-04-03", 0], ["2020-04-04", 0], ["2020-04-05", 0], ["2020-04-06", 0], ["2020-04-07", 0], ["2020-04-08", 1], ["2020-04-09", 0], ["2020-04-10", 0], ["2020-04-11", 0], ["2020-04-12", 1], ["2020-04-13", 0], ["2020-04-14", 0], ["2020-04-15", 0], ["2020-04-16", 0], ["2020-04-17", 1], ["2020-04-18", 1], ["2020-04-19", 0], ["2020-04-20", 0], ["2020-04-21", 0], ["2020-04-22", 1], ["2020-04-23", 0], ["2020-04-24", 1], ["2020-04-25", 0]]
+            data: [["2019-04-26", 0], ["2019-04-27", 0], ["2019-04-28", 0], ["2019-04-29", 0], ["2019-04-30", 0], ["2019-05-01", 0], ["2019-05-02", 0], ["2019-05-03", 0], ["2019-05-04", 0], ["2019-05-05", 0], ["2019-05-06", 0], ["2019-05-07", 0], ["2019-05-08", 0], ["2019-05-09", 0], ["2019-05-10", 0], ["2019-05-11", 0], ["2019-05-12", 0], ["2019-05-13", 0], ["2019-05-14", 0], ["2019-05-15", 0], ["2019-05-16", 0], ["2019-05-17", 0], ["2019-05-18", 0], ["2019-05-19", 0], ["2019-05-20", 0], ["2019-05-21", 0], ["2019-05-22", 0], ["2019-05-23", 0], ["2019-05-24", 0], ["2019-05-25", 0], ["2019-05-26", 0], ["2019-05-27", 0], ["2019-05-28", 0], ["2019-05-29", 0], ["2019-05-30", 0], ["2019-05-31", 0], ["2019-06-01", 0], ["2019-06-02", 0], ["2019-06-03", 0], ["2019-06-04", 0], ["2019-06-05", 0], ["2019-06-06", 0], ["2019-06-07", 0], ["2019-06-08", 0], ["2019-06-09", 0], ["2019-06-10", 0], ["2019-06-11", 0], ["2019-06-12", 0], ["2019-06-13", 0], ["2019-06-14", 0], ["2019-06-15", 0], ["2019-06-16", 0], ["2019-06-17", 0], ["2019-06-18", 0], ["2019-06-19", 0], ["2019-06-20", 0], ["2019-06-21", 0], ["2019-06-22", 0], ["2019-06-23", 0], ["2019-06-24", 0], ["2019-06-25", 0], ["2019-06-26", 0], ["2019-06-27", 0], ["2019-06-28", 0], ["2019-06-29", 0], ["2019-06-30", 0], ["2019-07-01", 0], ["2019-07-02", 0], ["2019-07-03", 0], ["2019-07-04", 0], ["2019-07-05", 0], ["2019-07-06", 0], ["2019-07-07", 0], ["2019-07-08", 0], ["2019-07-09", 0], ["2019-07-10", 0], ["2019-07-11", 0], ["2019-07-12", 0], ["2019-07-13", 0], ["2019-07-14", 0], ["2019-07-15", 0], ["2019-07-16", 0], ["2019-07-17", 0], ["2019-07-18", 0], ["2019-07-19", 0], ["2019-07-20", 0], ["2019-07-21", 0], ["2019-07-22", 0], ["2019-07-23", 0], ["2019-07-24", 0], ["2019-07-25", 0], ["2019-07-26", 0], ["2019-07-27", 0], ["2019-07-28", 0], ["2019-07-29", 0], ["2019-07-30", 0], ["2019-07-31", 0], ["2019-08-01", 0], ["2019-08-02", 0], ["2019-08-03", 0], ["2019-08-04", 0], ["2019-08-05", 0], ["2019-08-06", 0], ["2019-08-07", 0], ["2019-08-08", 0], ["2019-08-09", 0], ["2019-08-10", 0], ["2019-08-11", 0], ["2019-08-12", 0], ["2019-08-13", 0], ["2019-08-14", 0], ["2019-08-15", 0], ["2019-08-16", 0], ["2019-08-17", 0], ["2019-08-18", 0], ["2019-08-19", 0], ["2019-08-20", 0], ["2019-08-21", 0], ["2019-08-22", 0], ["2019-08-23", 0], ["2019-08-24", 0], ["2019-08-25", 0], ["2019-08-26", 0], ["2019-08-27", 0], ["2019-08-28", 0], ["2019-08-29", 0], ["2019-08-30", 0], ["2019-08-31", 0], ["2019-09-01", 0], ["2019-09-02", 0], ["2019-09-03", 0], ["2019-09-04", 0], ["2019-09-05", 0], ["2019-09-06", 0], ["2019-09-07", 0], ["2019-09-08", 0], ["2019-09-09", 0], ["2019-09-10", 0], ["2019-09-11", 0], ["2019-09-12", 0], ["2019-09-13", 0], ["2019-09-14", 0], ["2019-09-15", 0], ["2019-09-16", 0], ["2019-09-17", 0], ["2019-09-18", 0], ["2019-09-19", 0], ["2019-09-20", 0], ["2019-09-21", 0], ["2019-09-22", 0], ["2019-09-23", 0], ["2019-09-24", 0], ["2019-09-25", 0], ["2019-09-26", 0], ["2019-09-27", 0], ["2019-09-28", 0], ["2019-09-29", 0], ["2019-09-30", 0], ["2019-10-01", 0], ["2019-10-02", 0], ["2019-10-03", 0], ["2019-10-04", 0], ["2019-10-05", 0], ["2019-10-06", 0], ["2019-10-07", 0], ["2019-10-08", 0], ["2019-10-09", 0], ["2019-10-10", 0], ["2019-10-11", 0], ["2019-10-12", 0], ["2019-10-13", 0], ["2019-10-14", 0], ["2019-10-15", 0], ["2019-10-16", 0], ["2019-10-17", 0], ["2019-10-18", 0], ["2019-10-19", 0], ["2019-10-20", 0], ["2019-10-21", 0], ["2019-10-22", 0], ["2019-10-23", 0], ["2019-10-24", 0], ["2019-10-25", 0], ["2019-10-26", 0], ["2019-10-27", 0], ["2019-10-28", 0], ["2019-10-29", 0], ["2019-10-30", 0], ["2019-10-31", 0], ["2019-11-01", 0], ["2019-11-02", 0], ["2019-11-03", 0], ["2019-11-04", 0], ["2019-11-05", 0], ["2019-11-06", 0], ["2019-11-07", 0], ["2019-11-08", 0], ["2019-11-09", 0], ["2019-11-10", 0], ["2019-11-11", 0], ["2019-11-12", 0], ["2019-11-13", 0], ["2019-11-14", 0], ["2019-11-15", 0], ["2019-11-16", 0], ["2019-11-17", 0], ["2019-11-18", 0], ["2019-11-19", 0], ["2019-11-20", 0], ["2019-11-21", 0], ["2019-11-22", 0], ["2019-11-23", 0], ["2019-11-24", 0], ["2019-11-25", 0], ["2019-11-26", 0], ["2019-11-27", 0], ["2019-11-28", 0], ["2019-11-29", 0], ["2019-11-30", 0], ["2019-12-01", 0], ["2019-12-02", 0], ["2019-12-03", 0], ["2019-12-04", 0], ["2019-12-05", 0], ["2019-12-06", 0], ["2019-12-07", 0], ["2019-12-08", 0], ["2019-12-09", 0], ["2019-12-10", 0], ["2019-12-11", 0], ["2019-12-12", 0], ["2019-12-13", 0], ["2019-12-14", 0], ["2019-12-15", 0], ["2019-12-16", 0], ["2019-12-17", 0], ["2019-12-18", 0], ["2019-12-19", 0], ["2019-12-20", 0], ["2019-12-21", 0], ["2019-12-22", 0], ["2019-12-23", 0], ["2019-12-24", 0], ["2019-12-25", 0], ["2019-12-26", 0], ["2019-12-27", 0], ["2019-12-28", 0], ["2019-12-29", 0], ["2019-12-30", 0], ["2019-12-31", 0], ["2020-01-01", 0], ["2020-01-02", 0], ["2020-01-03", 0], ["2020-01-04", 0], ["2020-01-05", 0], ["2020-01-06", 0], ["2020-01-07", 0], ["2020-01-08", 0], ["2020-01-09", 0], ["2020-01-10", 0], ["2020-01-11", 0], ["2020-01-12", 0], ["2020-01-13", 0], ["2020-01-14", 0], ["2020-01-15", 0], ["2020-01-16", 0], ["2020-01-17", 0], ["2020-01-18", 0], ["2020-01-19", 0], ["2020-01-20", 0], ["2020-01-21", 0], ["2020-01-22", 0], ["2020-01-23", 0], ["2020-01-24", 0], ["2020-01-25", 0], ["2020-01-26", 0], ["2020-01-27", 0], ["2020-01-28", 0], ["2020-01-29", 0], ["2020-01-30", 0], ["2020-01-31", 0], ["2020-02-01", 0], ["2020-02-02", 0], ["2020-02-03", 0], ["2020-02-04", 0], ["2020-02-05", 0], ["2020-02-06", 0], ["2020-02-07", 0], ["2020-02-08", 0], ["2020-02-09", 0], ["2020-02-10", 0], ["2020-02-11", 0], ["2020-02-12", 0], ["2020-02-13", 0], ["2020-02-14", 0], ["2020-02-15", 0], ["2020-02-16", 0], ["2020-02-17", 0], ["2020-02-18", 0], ["2020-02-19", 0], ["2020-02-20", 0], ["2020-02-21", 0], ["2020-02-22", 0], ["2020-02-23", 0], ["2020-02-24", 0], ["2020-02-25", 0], ["2020-02-26", 0], ["2020-02-27", 0], ["2020-02-28", 0], ["2020-02-29", 0], ["2020-03-01", 0], ["2020-03-02", 0], ["2020-03-03", 0], ["2020-03-04", 0], ["2020-03-05", 0], ["2020-03-06", 0], ["2020-03-07", 0], ["2020-03-08", 0], ["2020-03-09", 0], ["2020-03-10", 0], ["2020-03-11", 0], ["2020-03-12", 0], ["2020-03-13", 0], ["2020-03-14", 0], ["2020-03-15", 0], ["2020-03-16", 0], ["2020-03-17", 0], ["2020-03-18", 0], ["2020-03-19", 0], ["2020-03-20", 0], ["2020-03-21", 0], ["2020-03-22", 0], ["2020-03-23", 0], ["2020-03-24", 0], ["2020-03-25", 0], ["2020-03-26", 0], ["2020-03-27", 0], ["2020-03-28", 0], ["2020-03-29", 0], ["2020-03-30", 0], ["2020-03-31", 0], ["2020-04-01", 2], ["2020-04-02", 0], ["2020-04-03", 0], ["2020-04-04", 0], ["2020-04-05", 0], ["2020-04-06", 0], ["2020-04-07", 0], ["2020-04-08", 1], ["2020-04-09", 0], ["2020-04-10", 0], ["2020-04-11", 0], ["2020-04-12", 1], ["2020-04-13", 0], ["2020-04-14", 0], ["2020-04-15", 0], ["2020-04-16", 0], ["2020-04-17", 1], ["2020-04-18", 1], ["2020-04-19", 0], ["2020-04-20", 0], ["2020-04-21", 0], ["2020-04-22", 1], ["2020-04-23", 0], ["2020-04-24", 1], ["2020-04-25", 0], ["2020-04-26", 0]]
         }]
 
     };
@@ -744,523 +880,751 @@
 </script>
     
 
+    <div class="container archive-container ">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-chips">
+                    <span onclick="showTable()" id="sp-table" class="chip center-align waves-effect waves-light default"
+                          data-tagname="时间列表"
+                          style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); color:#fff">时间列表
+                    </span>
+                    <span onclick="showTime()" id="sp-timeline"
+                          class="chip center-align waves-effect waves-light default"
+                          data-tagname="时间轴" style="background-color: #F9EBEA;">时间轴
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cd-table" class="container archive-container">
+        <div class="card">
+            <div class="card-content">
+                
+                
+                    <div class="archive">
+                        <h4 class="archive-year" id="2020">2020年</h4>
+                        <div class="articles">
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/173e.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="动态规划之01背包问题"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/173e.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-24T15:40:03.000Z" itemprop="datePublished" >
+                                            2020-04-24 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/173e.html">动态规划之01背包问题</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/9589.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="基于Linux用C语言实现TCP半双工通信和UDP半双工通信"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/9589.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-22T10:47:10.000Z" itemprop="datePublished" >
+                                            2020-04-22 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/9589.html">基于Linux用C语言实现TCP半双工通信和UDP半双工通信</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/b87d.html">
+                                    <div class="imgcontent"><img class="postimg" src="/loading.gif" data-original="/medias/featureimages/3.jpg" alt="排序算法之归并排序"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/b87d.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-17T16:37:45.000Z" itemprop="datePublished" >
+                                            2020-04-18 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/b87d.html">排序算法之归并排序</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/a28a.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="C语言和Java中生成随机数"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/a28a.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-17T15:53:06.000Z" itemprop="datePublished" >
+                                            2020-04-17 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/a28a.html">C语言和Java中生成随机数</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/2be2.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="Linux  Shell编程"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/2be2.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-12T05:46:43.000Z" itemprop="datePublished" >
+                                            2020-04-12 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/2be2.html">Linux  Shell编程</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/8006.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="赤途-隐形守护者前作"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/8006.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-08T09:09:43.000Z" itemprop="datePublished" >
+                                            2020-04-8 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/8006.html">赤途-隐形守护者前作</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/c971.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="Ubuntn黑屏问题"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/c971.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-01T06:29:43.000Z" itemprop="datePublished" >
+                                            2020-04-1 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/c971.html">Ubuntn黑屏问题</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                                <div class="article content>">
+                                <!--  <a href="/posts/275f.html">
+                                    <div class="imgcontent">/loading.gif" data-original="/loading.gif" data-original="<img class="postimg" src="" alt="进程与线程"></div>  
+                                  </a> -->
+                                  <div class="article-sort-post">
+                                    <div class="article-sort-item_title">
+                                      <a href="/posts/275f.html">
+                                        <h5>
+                                          <i class="fa fa-clock" style="font-size: 1rem;cursor: pointer;"></i>
+                                          <time class="is-text-small" datetime="2020-04-01T04:23:05.000Z" itemprop="datePublished" >
+                                            2020-04-1 
+                                          </time>
+                                        </h5>
+                                        <h6 class="is-6"><a href="/posts/275f.html">进程与线程</a></h6>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
     
 
-    <div id="cd-timeline" class="container">
+    <div id="cd-timeline" class="container" style="display: none">
         
-        <div class="cd-timeline-block">
+            <div class="cd-timeline-block">
 
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2020">2020</a>
-            </div>
-            
+                
+                
+                    
+                    <div class="cd-timeline-img year" data-aos="zoom-in-up">
+                        <a href="/archives/2020">2020</a>
+                    </div>
+                
 
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2020/04">04</a>
-            </div>
-            
+                
+                
+                    
+                    <div class="cd-timeline-img month" data-aos="zoom-in-up">
+                        <a href="/archives/2020/04">04</a>
+                    </div>
+                
 
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>24</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/173e.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="动态规划之01背包问题">
-                                
-                                <span class="card-title">动态规划之01背包问题</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    问题描述给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：     物品编号   1   2   3   4   5      重量W  
-                                
-                            </div>
-                            <div class="publish-info">
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>24</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/173e.html">
+                                <div class="card-image">
+                                    
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="动态规划之01背包问题">
+                                    
+                                    <span class="card-title">动态规划之01背包问题</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        问题描述给定N个物品和一个背包，背包的容量为W， 假设背包容量范围在[0，15]，第i个物品对应的体积和价值分别为W[i]和v[i]。各种物品的价值和重量如下：     物品编号   1   2   3   4   5      重量W  
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-24
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category"
+                                                   target="_blank">
                                     算法
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/%E7%AE%97%E6%B3%95/"><span class="chip bg-color">算法</span></a>
-                            
-                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="chip bg-color">动态规划</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/%E7%AE%97%E6%B3%95/"><span
+                                                    class="chip bg-color">算法</span></a>
+                                    
+                                        <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span
+                                                    class="chip bg-color">动态规划</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>22</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/9589.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="基于Linux用C语言实现TCP半双工通信和UDP半双工通信">
-                                
-                                <span class="card-title">基于Linux用C语言实现TCP半双工通信和UDP半双工通信</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    TCP协议/UDP协议介绍
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>22</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/9589.html">
+                                <div class="card-image">
+                                    
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="基于Linux用C语言实现TCP半双工通信和UDP半双工通信">
+                                    
+                                    <span class="card-title">基于Linux用C语言实现TCP半双工通信和UDP半双工通信</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        TCP协议/UDP协议介绍
 TCP/IP（Transmission Control Protocol/Internet Protocol，传输控制协议/网际协议）是指能够在多个不同网络间实现信息传输的协议簇。TCP/IP协议不仅仅指的是TC
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-22
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="post-category"
+                                                   target="_blank">
                                     网络编程
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/Linux/"><span class="chip bg-color">Linux</span></a>
-                            
-                            <a href="/tags/%E5%8D%8A%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1/"><span class="chip bg-color">半双工通信</span></a>
-                            
-                            <a href="/tags/C%E8%AF%AD%E8%A8%80/"><span class="chip bg-color">C语言</span></a>
-                            
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"><span class="chip bg-color">网络编程</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/Linux/"><span
+                                                    class="chip bg-color">Linux</span></a>
+                                    
+                                        <a href="/tags/%E5%8D%8A%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1/"><span
+                                                    class="chip bg-color">半双工通信</span></a>
+                                    
+                                        <a href="/tags/C%E8%AF%AD%E8%A8%80/"><span
+                                                    class="chip bg-color">C语言</span></a>
+                                    
+                                        <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"><span
+                                                    class="chip bg-color">网络编程</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>18</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/b87d.html">
-                            <div class="card-image">
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="排序算法之归并排序">
-                                
-                                <span class="card-title">排序算法之归并排序</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>18</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/b87d.html">
+                                <div class="card-image">
                                     
+                                        <img src="/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="排序算法之归并排序">
+                                    
+                                    <span class="card-title">排序算法之归并排序</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        
 归并排序归并：将两个或两个以上的有序表组合成一个新有序表主要的思想:划分，求解子问题，综合解利用递归的分治方法：1、将原序列细分，直到成为单个元素2、在将分割后的序列一层一层地按顺序合并,完成排序。细分通过不断深入递归完成，合并通过递归一
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category"
+                                                   target="_blank">
                                     数据结构
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/%E6%8E%92%E5%BA%8F/"><span class="chip bg-color">排序</span></a>
-                            
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="chip bg-color">数据结构</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/%E6%8E%92%E5%BA%8F/"><span
+                                                    class="chip bg-color">排序</span></a>
+                                    
+                                        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span
+                                                    class="chip bg-color">数据结构</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>17</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/a28a.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="C语言和Java中生成随机数">
-                                
-                                <span class="card-title">C语言和Java中生成随机数</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    在实际编程中，我们经常需要生成随机数，例如，实现排序算法的时候通过生成随机数来测试算法的可行性
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>17</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/a28a.html">
+                                <div class="card-image">
+                                    
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="C语言和Java中生成随机数">
+                                    
+                                    <span class="card-title">C语言和Java中生成随机数</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        在实际编程中，我们经常需要生成随机数，例如，实现排序算法的时候通过生成随机数来测试算法的可行性
 C语言生成随机数  在C语言中，我们一般使用 &lt;stdlib.h&gt; 头文件中的 rand() 函数来生成随机数，rand() 会随机
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="post-category"
+                                                   target="_blank">
                                     程序设计
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/"><span class="chip bg-color">随机数</span></a>
-                            
-                            <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="chip bg-color">程序设计</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%95%B0/"><span
+                                                    class="chip bg-color">随机数</span></a>
+                                    
+                                        <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span
+                                                    class="chip bg-color">程序设计</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>12</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/2be2.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="Linux  Shell编程">
-                                
-                                <span class="card-title">Linux  Shell编程</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    Shell 编程概述
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>12</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/2be2.html">
+                                <div class="card-image">
+                                    
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="Linux  Shell编程">
+                                    
+                                    <span class="card-title">Linux  Shell编程</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        Shell 编程概述
 Shell是系统的用户界面，提供了用户与内核进行交互操作的一种接口它接收用户输入的命令并把它送入内核去执行。实际上Shell是一个命令解释器，它解释由用户输入的命令并且把它们送到内核。不仅如此，Shell有自己的编程语
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Shell/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/Shell/" class="post-category"
+                                                   target="_blank">
                                     Shell
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/Linux/"><span class="chip bg-color">Linux</span></a>
-                            
-                            <a href="/tags/Shell/"><span class="chip bg-color">Shell</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/Linux/"><span
+                                                    class="chip bg-color">Linux</span></a>
+                                    
+                                        <a href="/tags/Shell/"><span
+                                                    class="chip bg-color">Shell</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>08</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/8006.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/15.jpg" class="responsive-img" alt="赤途-隐形守护者前作">
-                                
-                                <span class="card-title">赤途-隐形守护者前作</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    分享一个之前在隐形守护者大火的时候找到的资源
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>08</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/8006.html">
+                                <div class="card-image">
+                                    
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/15.jpg" class="responsive-img" alt="赤途-隐形守护者前作">
+                                    
+                                    <span class="card-title">赤途-隐形守护者前作</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        分享一个之前在隐形守护者大火的时候找到的资源
 游戏简介:《潜伏之赤途》是由fantasia制作的一款文字推理谍战游戏，以抗日战争时期的上海滩为背景。玩家扮演的角色方别是一位潜伏日军情报机关的地下党，进行暗杀、窃取情报等一系列活动。在潜伏的路
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-user fa-fw"></i>
-                                    topking
-                                    
-                                </span>
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-user fa-fw"></i>
+                                            topking
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/%E9%9A%90%E5%BD%A2%E5%AE%88%E6%8A%A4%E8%80%85/"><span class="chip bg-color">隐形守护者</span></a>
-                            
-                            <a href="/tags/%E6%B8%B8%E6%88%8F/"><span class="chip bg-color">游戏</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/%E9%9A%90%E5%BD%A2%E5%AE%88%E6%8A%A4%E8%80%85/"><span
+                                                    class="chip bg-color">隐形守护者</span></a>
+                                    
+                                        <a href="/tags/%E6%B8%B8%E6%88%8F/"><span
+                                                    class="chip bg-color">游戏</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>01</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/c971.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="Ubuntn黑屏问题">
-                                
-                                <span class="card-title">Ubuntn黑屏问题</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>01</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/c971.html">
+                                <div class="card-image">
                                     
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="Ubuntn黑屏问题">
+                                    
+                                    <span class="card-title">Ubuntn黑屏问题</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        
 基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题
 在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -deskto
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Linux/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/Linux/" class="post-category"
+                                                   target="_blank">
                                     Linux
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/Linux/"><span class="chip bg-color">Linux</span></a>
-                            
-                            <a href="/tags/Ubuntn/"><span class="chip bg-color">Ubuntn</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/Linux/"><span
+                                                    class="chip bg-color">Linux</span></a>
+                                    
+                                        <a href="/tags/Ubuntn/"><span
+                                                    class="chip bg-color">Ubuntn</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>01</span>
+                </article>
             </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/275f.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="进程与线程">
-                                
-                                <span class="card-title">进程与线程</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
+        
+            <div class="cd-timeline-block">
+
+                
+                
+
+                
+                
+
+                
+                <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                    <span>01</span>
+                </div>
+                <article class="cd-timeline-content" data-aos="fade-up">
+                    <div class="article col s12 m6">
+                        <div class="card">
+                            <a href="/posts/275f.html">
+                                <div class="card-image">
                                     
+                                        
+                                        <img src="/loading.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="进程与线程">
+                                    
+                                    <span class="card-title">进程与线程</span>
+                                </div>
+                            </a>
+                            <div class="card-content article-content">
+                                <div class="summary block-with-text">
+                                    
+                                        
 进程与线程———我的第一篇博客
 没有进程就没有线程，就像没有操作系统就没有进程一样。尽管线程不是进程，但在许多方面，它非常类似进程，线程是运行在进程中的小程序
 程序是一段静态的代码，它是应用程序执行的蓝本。进程是程序的一次动态执行过程，它
-                                
-                            </div>
-                            <div class="publish-info">
+                                    
+                                </div>
+                                <div class="publish-info">
                                 <span class="publish-date">
                                     <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
                                 </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E8%BF%9B%E7%A8%8B/" class="post-category">
+                                    <span class="publish-author">
+                                        
+                                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                            
+                                                <a href="/categories/%E8%BF%9B%E7%A8%8B/" class="post-category"
+                                                   target="_blank">
                                     进程
                                     </a>
-                                    
-                                    
-                                </span>
+                                            
+                                        
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        
-                        <div class="card-action article-tags">
                             
-                            <a href="/tags/%E8%BF%9B%E7%A8%8B/"><span class="chip bg-color">进程</span></a>
-                            
-                            <a href="/tags/%E7%BA%BF%E7%A8%8B/"><span class="chip bg-color">线程</span></a>
+                                <div class="card-action article-tags">
+                                    
+                                        <a href="/tags/%E8%BF%9B%E7%A8%8B/"><span
+                                                    class="chip bg-color">进程</span></a>
+                                    
+                                        <a href="/tags/%E7%BA%BF%E7%A8%8B/"><span
+                                                    class="chip bg-color">线程</span></a>
+                                    
+                                </div>
                             
                         </div>
-                        
                     </div>
-                </div>
-            </article>
-        </div>
+                </article>
+            </div>
         
     </div>
 
 </main>
 
 
+<script>
+    function showTime() {
+        $("#cd-timeline").show();
+        $("#cd-table").hide();
+        $("#sp-timeline").css('background', 'linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)');
+        $("#sp-timeline").css('color', '#fff');
+        $("#sp-table").css('background', '#F9EBEA')
+        $("#sp-table").css('color', 'rgba(0,0,0,0.6)');
+    }
 
+    function showTable() {
+        $("#cd-timeline").hide();
+        $("#cd-table").show();
+        $("#sp-table").css('background', 'linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)');
+        $("#sp-table").css('color', '#fff');
+        $("#sp-timeline").css('background', '#F9EBEA')
+        $("#sp-timeline").css('color', 'rgba(0,0,0,0.6)');
+    }
+
+</script>
 
     <footer class="page-footer bg-color">
 
@@ -1487,7 +1851,7 @@ $(function () {
             }
           }
         });
-        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>
 
