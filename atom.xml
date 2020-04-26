@@ -197,17 +197,22 @@
   </entry>
   
   <entry>
-    <title>Ubuntn黑屏问题</title>
+    <title>基于虚拟机 VMware 下的Ubuntn开机黑屏问题</title>
     <link href="https://topking66.gitee.io/posts/c971.html"/>
     <id>https://topking66.gitee.io/posts/c971.html</id>
     <published>2020-04-01T06:29:43.000Z</published>
-    <updated>2020-04-13T03:11:34.081Z</updated>
+    <updated>2020-04-26T05:11:29.054Z</updated>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;h1 id=&quot;基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题&quot;&gt;&lt;a href=&quot;#基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题&quot; class=&quot;headerlink&quot; title=&quot;基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题&quot;&gt;&lt;/a&gt;基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好，后面第二次打开的时候经常会出现开Ubuntn会黑屏无法正常启动，它就搁那一动不动，想关它的时候一直显示虚拟机繁忙，除了重启电脑或者用任务管理器结束进程一点办法没有&lt;/strong&gt;&lt;/p&gt;
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     

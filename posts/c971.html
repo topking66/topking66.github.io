@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Ubuntn黑屏问题, hexo,学习,Java,sql">
+    <meta name="keywords" content="基于虚拟机 VMware 下的Ubuntn开机黑屏问题, hexo,学习,Java,sql">
     <meta name="description" content="落叶的一生,只是为了归根吗">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Ubuntn黑屏问题 | topking</title>
+    <title>基于虚拟机 VMware 下的Ubuntn开机黑屏问题 | topking</title>
     <link rel="icon" type="image/png" href="/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -607,12 +607,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Ubuntn黑屏问题</h1>
+                    <h1 class="description center-align post-title">基于虚拟机 VMware 下的Ubuntn开机黑屏问题</h1>
                 </div>
             </div>
         </div>
@@ -775,7 +775,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    375
+                    481
                 </div>
                 
 
@@ -794,17 +794,22 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <hr>
-<h1 id="基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题"><a href="#基于虚拟机-VMware下的Ubuntn-12-04-2-desktop-开机黑屏问题" class="headerlink" title="基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题"></a>基于虚拟机 VMware下的Ubuntn 12.04.2 -desktop 开机黑屏问题</h1><ul>
-<li><p><strong>在刚开始学习Linux系统的时候，安装环境遇到了很多让人心态爆炸的问题，各种bug不断一个问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好，后面第二次打开的时候经常会出现开Ubuntn会黑屏无法正常启动，它就搁那一动不动，想关它的时候一直显示虚拟机繁忙，除了重启电脑或者用任务管理器结束进程一点办法没有</strong></p>
-<a id="more"></a>
-</li>
-<li><p><strong>在经历了很长一段时间的折磨和煎熬之后，包括重装了几次虚拟机和Ubuntn,搜遍了网上的解决办法，虽不知道黑屏的具体原因，但终于把问题解决了,这个办法可以一试</strong></p>
-</li>
-<li><p>首先，在windows搜索框搜cmd </p>
-</li>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li><strong>在刚开始学习Linux系统的时候，安装配置环境遇到了很多让人心态爆炸的问题，各种bug不断其中一个主要问题就是在装了Ubuntn 12.04.2 -desktop 系统之后，刚安装完第一次开机的时候还好好的，后面关机了再次打开的时候就出现Ubuntn黑屏无法正常启动的问题,等了很久Ubuntn也没有启动，想关掉它却一直会显示虚拟机繁忙根本关不掉，除了重启电脑或者用任务管理器强行虚拟机结束进程一点办法没有，最烦人的是就算你重启或者用任务管理器关掉它之后照样开机还是黑屏，Ubuntn还是依然的打不开</strong>  </li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/20200401141039811.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="\]
-"><br><strong>然后以管理员身份进行</strong><br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200401141422551.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入  net winsock reset<br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200401141600238.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>重启电脑<br>win+R然后输入msconfig<br>在服务里先把隐藏所有Microsoft 服务打勾，然后<br>再在里面找到所有带VMware 的把勾取消</strong><br><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200401141654876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTkzMDk4Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>点击应用，确定，然后重启电脑<br>重启后发现所有vm相关进程都没有启动<br>再次打开msconfig,选中所有vm相关服务,点击应用,重启电脑<br>然后打开虚拟机就没有黑屏问题了，通过这个方法过了一周到现在也没有再发生过黑屏</strong></p>
+<ul>
+<li><strong>在经历了很长一段时间的折磨和煎熬之后，包括重装了几次虚拟机和Ubuntn,重装虚拟机和Ubuntn的话第一次开机是没问题的，但是关机后再开机还是会出现黑屏，后面还是通过万能的度娘把问题解决了</strong> </li>
+</ul>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul>
+<li><strong>首先，在windows搜索框搜cmd</strong> </li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200401141039811.png?" alt="\]
+"><br><strong>然后以管理员身份进行</strong></p>
+<p><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200401141422551.png?" alt="在这里插入图片描述"></p>
+<p><strong>输入  net winsock reset</strong>  </p>
+<p><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200401141600238.png?" alt=""></p>
+<p><strong>然后重启电脑</strong><br><strong>win+R然后输入msconfig</strong><br><strong>在服务里先把隐藏所有Microsoft 服务打勾，之后<br>再在里面找到所有带VMware 的把勾取消,就是把所有跟vmware相关的服务取消</strong>  </p>
+<p><img src="/loading.gif" data-original="https://img-blog.csdnimg.cn/20200401141654876.png?" alt=""><br><strong>点击应用（一定要点），确定，然后重启电脑<br>重启后打开任务管理器发现所有vmware相关进程都没有启动</strong><br><strong>再次win+R打开msconfig,选中所有vmware相关服务,点击应用,启用vmware的服务,再次重启电脑<br>然后打开Ubuntn不会发生黑屏问题了，问题得以解决，通过这个方法过了一周到现在Ubuntn也没有再也发生过黑屏</strong>     </p>
 
             </div>
             <hr/>
@@ -1572,7 +1577,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="blue-color">11.7k</span>&nbsp;字
+                class="blue-color">11.8k</span>&nbsp;字
             
             
             
@@ -1783,7 +1788,7 @@ $(function () {
             }
           }
         });
-        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+        </script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":160,"height":320},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
 
 </html>
 
